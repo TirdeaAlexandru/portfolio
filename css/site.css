@@ -220,6 +220,44 @@ img {
   transform: translateZ(0);
 }
 
+.gallery a::before {
+  position: absolute;
+  z-index: 2;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  background: var(--photo-tone, #8c8983);
+  content: "";
+  opacity: .9;
+  transition: height 240ms var(--ease-smooth), opacity 180ms ease;
+}
+
+.gallery a:hover::before,
+.gallery a:focus-visible::before {
+  height: 7px;
+  opacity: 1;
+}
+
+.palette-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  margin: -26px auto 28px;
+  color: var(--muted);
+  font-size: 11px;
+  letter-spacing: .04em;
+}
+
+.palette-note::before {
+  width: 22px;
+  height: 4px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #72885c, #c99064, #8b779a);
+  content: "";
+}
+
 .collection-heading {
   max-width: 720px;
   margin: 8px auto clamp(38px, 5vw, 68px);
