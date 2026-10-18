@@ -42,7 +42,7 @@
     "Travel · Colour": "Călătorii · Culoare", "Landscape · Evening": "Peisaj · Amurg", "Street · Colour": "Stradă · Culoare",
     "Street · Long exposure": "Stradă · Expunere lungă", "Get $25 download ↗": "Descarcă la 25 $ ↗",
     "Interested in another image? Open it in the gallery and choose “Contact me” to include that photograph in your print enquiry.": "Te interesează altă fotografie? Deschide-o în galerie și alege „Contactează-mă” pentru a o include în cererea ta.",
-    "Let’s make something memorable": "Hai să creăm ceva memorabil", "Get in touch.": "Să vorbim.", "Let’s talk.": "Hai să vorbim.",
+    "Let’s make something memorable": "Hai să creăm ceva memorabil", "Get in touch.": "Să vorbim.", "Let’s talk.": "Hai să vorbim.", "Have a photo, film, or event in mind? Send me a note.": "Ai în minte o fotografie, un film sau un eveniment? Scrie-mi.",
     "For photography, film, prints, or a good idea that deserves a conversation.": "Pentru fotografie, film, printuri sau o idee bună despre care merită să vorbim.",
     "Follow along": "Urmărește-mă", "Based in Galați, Romania · Available for projects": "Din Galați, România · Disponibil pentru proiecte",
     "Photographer · Filmmaker": "Fotograf · Regizor",
