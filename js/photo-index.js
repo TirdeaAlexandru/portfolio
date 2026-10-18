@@ -674,5 +674,20 @@ window.portfolioPhotos = [
     "href": "landscape.html#photo-75-_dsc3887-hdr-pano",
     "location": "Luxembourg",
     "place": "Park pond at blue hour, Luxembourg"
+  },
+  {
+    "file": "63-_dsc3949-hdr-72-51.jpg",
+    "pages": [
+      "street.html",
+      "landscape.html",
+      "journal.html"
+    ],
+    "tags": "Luxembourg streetlight lamp moon blue hour dusk city architecture night landscape trees urban",
+    "title": "Street lamps beneath the moon",
+    "award": "",
+    "page": "landscape.html",
+    "href": "landscape.html#photo-63-_dsc3949-hdr-72-51",
+    "location": "Luxembourg",
+    "place": "Street lamps beneath the moon, Luxembourg"
   }
 ];

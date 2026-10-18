@@ -131,16 +131,20 @@
     requestAnimationFrame(waitForScrollEnd);
   }
   const mapPlaces = [
-    { label: "Galați · Danube Rock Revolution", city: "Galați", coords: cities["Galați"] },
-    { label: "Târgul Bujor, Galați", city: "Galați", coords: [45.8667, 27.9167] },
-    { label: "Bucharest · Ateneul Românesc", city: "Bucharest", coords: [44.4354, 26.0979] },
-    { label: "Venice", city: "Venice", coords: cities.Venice },
-    { label: "Metz", city: "Metz", coords: cities.Metz },
-    { label: "Luxembourg", city: "Luxembourg", coords: cities.Luxembourg },
-    { label: "Nancy", city: "Nancy", coords: cities.Nancy },
-    { label: "Constanța", city: "Constanța", coords: cities["Constanța"] },
-    { label: "Danube Delta · Delta Dunării", city: "Danube Delta", coords: cities["Danube Delta"] }
+    { label: "Galați · Danube Rock Revolution", labelRo: "Galați · Danube Rock Revolution", city: "Galați", coords: cities["Galați"] },
+    { label: "Târgul Bujor, Galați", labelRo: "Târgul Bujor, Galați", city: "Galați", coords: [45.8667, 27.9167] },
+    { label: "Bucharest · Ateneul Românesc", labelRo: "București · Ateneul Românesc", city: "Bucharest", coords: [44.4354, 26.0979] },
+    { label: "Venice", labelRo: "Veneția", city: "Venice", coords: cities.Venice },
+    { label: "Metz", labelRo: "Metz", city: "Metz", coords: cities.Metz },
+    { label: "Luxembourg", labelRo: "Luxemburg", city: "Luxembourg", coords: cities.Luxembourg },
+    { label: "Nancy", labelRo: "Nancy", city: "Nancy", coords: cities.Nancy },
+    { label: "Constanța", labelRo: "Constanța", city: "Constanța", coords: cities["Constanța"] },
+    { label: "Danube Delta · Delta Dunării", labelRo: "Delta Dunării", city: "Danube Delta", coords: cities["Danube Delta"] }
   ];
+  const placeMarkers = [];
+  function placeLabel(place) {
+    return window.portfolioLanguage && window.portfolioLanguage() === "ro" ? place.labelRo : place.label;
+  }
   mapPlaces.forEach(function (place) {
     const marker = L.circleMarker(place.coords, {
       radius: 6,
@@ -149,10 +153,14 @@
       fillColor: "#30353a",
       fillOpacity: 1
     }).addTo(map);
-    marker.bindTooltip(place.label, { direction: "top", offset: [0, -7] });
+    marker.bindTooltip(placeLabel(place), { direction: "top", offset: [0, -7] });
+    placeMarkers.push({ marker: marker, place: place });
     if (place.city) {
       marker.on("click", function () { showCityPhotos(place.city); });
     }
+  });
+  window.addEventListener("portfolio-language-change", function () {
+    placeMarkers.forEach(function (item) { item.marker.setTooltipContent(placeLabel(item.place)); });
   });
 
   // Fit the real map to the available panel instead of relying on a fixed zoom.

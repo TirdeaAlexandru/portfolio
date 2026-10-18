@@ -59,7 +59,10 @@
     "Photographs connected to places, with locations added only when confirmed.": "Fotografii legate de locuri, cu locații adăugate doar după confirmare.",
     "EUROPE": "EUROPA", "A map of where the photographs lead": "O hartă a locurilor surprinse",
     "Explore the cities, then browse every photograph below.": "Explorează orașele și răsfoiește toate fotografiile de mai jos.",
+    "Explore the map or choose a city to browse its photographs.": "Explorează harta sau alege un oraș pentru a-i vedea fotografiile.",
     "Jump to a city on the map": "Mergi la un oraș de pe hartă", "Bucharest": "București",
+    "Venice": "Veneția", "Luxembourg": "Luxemburg", "Danube Delta": "Delta Dunării",
+    "Photographs by location": "Fotografii după locație", "Browse photographs by location": "Răsfoiește fotografiile după locație",
     "More photographs from home will be added here.": "Voi adăuga aici mai multe fotografii de acasă.",
     "Photographs from Bucharest will be added here.": "Voi adăuga aici fotografii din București.",
     "More photographs will be added here.": "Voi adăuga aici mai multe fotografii.",
@@ -123,6 +126,7 @@
   };
 
   const attributes = {
+    "Interactive map of the cities in the photo journal": "Hartă interactivă a orașelor din jurnalul foto",
     "Watch Lady Tan’s Circle of Women on YouTube — Boovie 2026 first prize": "Urmărește Doamna Tan și cercul binelui pe YouTube — Premiul I Boovie 2026",
     "Watch A Good Life on YouTube — Boovie 2025 special prize": "Urmărește A Good Life pe YouTube — Premiul special Boovie 2025",
     "Selected Work — Alexandru Țîrdea": "Lucrări selectate — Alexandru Țîrdea",
