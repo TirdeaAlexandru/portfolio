@@ -52,8 +52,59 @@
   const items = Array.from(document.querySelectorAll(".gallery a[data-full]"));
   document.querySelectorAll(".gallery img").forEach(function (image) {
     image.decoding = "async";
+
+    function applyPaletteTone() {
+      const tile = image.closest("a");
+      if (!tile || !image.naturalWidth || !image.naturalHeight) return;
+      try {
+        const canvas = document.createElement("canvas");
+        canvas.width = 24;
+        canvas.height = 24;
+        const context = canvas.getContext("2d", { willReadFrequently: true });
+        context.drawImage(image, 0, 0, canvas.width, canvas.height);
+        const pixels = context.getImageData(0, 0, canvas.width, canvas.height).data;
+        const hues = new Array(12).fill(0);
+        let luminanceTotal = 0;
+        let luminanceCount = 0;
+
+        for (let i = 0; i < pixels.length; i += 4) {
+          const r = pixels[i] / 255;
+          const g = pixels[i + 1] / 255;
+          const b = pixels[i + 2] / 255;
+          const max = Math.max(r, g, b);
+          const min = Math.min(r, g, b);
+          const delta = max - min;
+          const luminance = (max + min) / 2;
+          luminanceTotal += luminance;
+          luminanceCount++;
+          if (delta < 0.1 || luminance < 0.12 || luminance > 0.9) continue;
+
+          let hue;
+          if (max === r) hue = 60 * (((g - b) / delta) % 6);
+          else if (max === g) hue = 60 * ((b - r) / delta + 2);
+          else hue = 60 * ((r - g) / delta + 4);
+          if (hue < 0) hue += 360;
+          const saturation = delta / (1 - Math.abs(2 * luminance - 1));
+          const bucket = Math.floor(hue / 30) % hues.length;
+          hues[bucket] += saturation * (0.55 + Math.min(luminance, 1 - luminance));
+        }
+
+        const strongest = Math.max(...hues);
+        if (!strongest) {
+          const gray = Math.round(38 + (luminanceTotal / luminanceCount) * 28);
+          tile.style.setProperty("--photo-tone", "hsl(35 5% " + gray + "% )");
+          return;
+        }
+        const hue = hues.indexOf(strongest) * 30 + 15;
+        tile.style.setProperty("--photo-tone", "hsl(" + hue + " 42% 52%)");
+      } catch (error) {
+        tile.style.setProperty("--photo-tone", "#8c8983");
+      }
+    }
+
     function reveal() {
       image.classList.add("is-loaded");
+      applyPaletteTone();
     }
     if (image.complete && image.naturalWidth > 0) reveal();
     else {
