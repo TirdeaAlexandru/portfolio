@@ -9,7 +9,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500;1,600&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/site.css?v=mobile-nav-fix-20261018">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <link rel="stylesheet" href="css/site.css?v=journal-focus-glow-20261018">
 </head>
 <body>
   <header class="header">
@@ -24,33 +25,30 @@
   </header>
   <main class="page journal-page">
     <header class="journal-heading"><p class="section-kicker">Photography / Places</p><h1>Photo journal</h1><p>Photographs connected to places, with locations added only when confirmed.</p></header>
-    <section class="journal-map-section" aria-labelledby="journal-map-title">
-      <div class="journal-map-copy"><p class="section-kicker">EUROPE</p><h2 id="journal-map-title">A map of where the photographs lead</h2><p>Choose a city to see the photographs currently placed there.</p></div>
-      <div class="journal-map" aria-label="Map of Europe with portfolio locations">
-        <iframe title="OpenStreetMap of Europe" src="https://www.openstreetmap.org/export/embed.html?bbox=4.5%2C39.0%2C30.5%2C54.5&amp;layer=mapnik" loading="lazy"></iframe>
-        <button class="journal-pin" style="--x:90%;--y:60%" data-city="Galați" aria-label="Galați">1</button>
-        <button class="journal-pin" style="--x:30%;--y:60%" data-city="Venice" aria-label="Venice">2</button>
-        <button class="journal-pin" style="--x:6.5%;--y:36%" data-city="Metz" aria-label="Metz">3</button>
-        <button class="journal-pin" style="--x:10%;--y:40%" data-city="Nancy" aria-label="Nancy">4</button>
-        <button class="journal-pin" style="--x:12%;--y:32%" data-city="Luxembourg" aria-label="Luxembourg">5</button>
-        <button class="journal-pin" style="--x:34%;--y:12%" data-city="Berlin" aria-label="Berlin">6</button>
-      </div>
-      <p class="journal-attribution">Map data © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap contributors</a></p>
-      <div class="journal-cities" aria-label="Choose a city">
-        <button type="button" data-city-filter="Venice">Venice <span>1</span></button><button type="button" data-city-filter="Metz">Metz <span>2</span></button><button type="button" data-city-filter="Luxembourg">Luxembourg <span>2</span></button><button type="button" data-city-filter="Galați">Galați</button><button type="button" data-city-filter="Nancy">Nancy</button><button type="button" data-city-filter="Berlin">Berlin</button><button type="button" data-city-filter="Unplaced">To place</button>
+    <section class="journal-map-section" data-language-fixed="en" aria-labelledby="journal-map-title">
+      <div class="journal-map-copy"><p class="section-kicker">EUROPE</p><h2 id="journal-map-title">A map of where the photographs lead</h2><p>Explore the cities, then browse every photograph below.</p></div>
+      <div class="journal-map" id="journal-map" role="application" aria-label="Interactive map of the cities in the photo journal"></div>
+      <p class="journal-attribution">Explore the map or choose a city to browse its photographs.</p>
+      <div class="journal-cities" aria-label="Browse photographs by location">
+        <button type="button" data-city-focus="Galați">Galați</button><button type="button" data-city-focus="Bucharest">Bucharest</button><button type="button" data-city-focus="Venice">Venice</button><button type="button" data-city-focus="Metz">Metz</button><button type="button" data-city-focus="Constanța">Constanța</button><button type="button" data-city-focus="Luxembourg">Luxembourg</button><button type="button" data-city-focus="Nancy">Nancy</button><button type="button" data-city-focus="Danube Delta">Danube Delta</button>
       </div>
     </section>
     <section class="journal-entries" aria-label="Photographs by location">
-      <article class="journal-entry" data-city-entry="Venice"><h2>Venice</h2><p>Canals, light, and movement on the water.</p><div class="journal-photos"><a href="images/22-dsc_6921-7-7.jpg"><img src="images/22-dsc_6921-7-7.jpg" alt="Boats crossing Venice’s Grand Canal beneath Santa Maria della Salute" loading="lazy"></a></div></article>
-      <article class="journal-entry" data-city-entry="Metz"><h2>Metz</h2><p>Quiet passages and pale façades.</p><div class="journal-photos"><a id="photo-50-_dsc3112-59-38" href="images/50-_dsc3112-59-38.jpg"><img src="images/50-_dsc3112-59-38.jpg" alt="A narrow Metz alley with a no-entry sign" loading="lazy"></a><a id="photo-51-_dsc3204-60-39" href="images/51-_dsc3204-60-39.jpg"><img src="images/51-_dsc3204-60-39.jpg" alt="Pale Metz façade with blue windows" loading="lazy"></a></div></article>
-      <article class="journal-entry" data-city-entry="Luxembourg"><h2>Luxembourg</h2><p>Street life and a quiet park-side view.</p><div class="journal-photos"><a id="photo-53-_dsc3330-62-41" href="images/53-_dsc3330-62-41.jpg"><img src="images/53-_dsc3330-62-41.jpg" alt="Pedestrian street in Luxembourg" loading="lazy"></a><a id="photo-62-_dsc3907-hdr-pano-71-50" href="images/62-_dsc3907-hdr-pano-71-50.jpg"><img src="images/62-_dsc3907-hdr-pano-71-50.jpg" alt="Water and trees in Luxembourg at dusk" loading="lazy"></a></div></article>
-      <article class="journal-entry journal-entry--pending" data-city-entry="Unplaced"><h2>Location to confirm</h2><p>This photograph is waiting for a city match.</p><div class="journal-photos"><a id="photo-65-_dsc4030-12-12" href="images/65-_dsc4030-12-12.jpg"><img src="images/65-_dsc4030-12-12.jpg" alt="A small boat beside the water; location to confirm" loading="lazy"></a></div></article>
-      <p class="journal-empty" hidden>There are no confirmed photos for this city yet. More locations will appear as we place the images.</p>
+      <article class="journal-entry" data-city-entry="Galați"><h2>Galați</h2><p>Along the Danube and in the city.</p><div class="journal-photos"></div></article>
+      <article class="journal-entry" data-city-entry="Bucharest"><h2>Bucharest</h2><p>Street scenes, landmarks, and quiet moments.</p><div class="journal-photos"></div></article>
+      <article class="journal-entry" data-city-entry="Venice"><h2>Venice</h2><p>Canals, light, and movement on the water.</p><div class="journal-photos"></div></article>
+      <article class="journal-entry" data-city-entry="Metz"><h2>Metz</h2><p>City life and quiet passages.</p><div class="journal-photos"></div></article>
+      <article class="journal-entry" data-city-entry="Constanța"><h2>Constanța</h2><p>Sea, light, and the people of the coast.</p><div class="journal-photos"></div></article>
+      <article class="journal-entry" data-city-entry="Luxembourg"><h2>Luxembourg</h2><p>Riverside views and changing light.</p><div class="journal-photos"></div></article>
+      <article class="journal-entry" data-city-entry="Nancy"><h2>Nancy</h2><p>Photographs from the city.</p><div class="journal-photos"></div></article>
+      <article class="journal-entry" data-city-entry="Danube Delta"><h2>Danube Delta</h2><p>Wildlife and waterscapes from the delta.</p><div class="journal-photos"></div></article>
     </section>
   </main>
   <footer class="footer"><img class="footer-signature" src="images/signature.png" alt="Alexandru Țîrdea signature" draggable="false"><span>© Alexandru Țîrdea 2026</span><a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=tirdea.alex2020%40gmail.com">tirdea.alex2020@gmail.com</a></footer>
-  <script src="js/site.js?v=portfolio-bilingual-v2-20261018"></script><script src="js/language.js?v=portfolio-bilingual-v2-20261018"></script><script src="js/theme.js?v=theme-transition-20261018"></script><script src="js/chat-config.js?v=portfolio-ai-20261018"></script>
+  <script src="js/site.js?v=journal-mobile-map-20261018"></script><script src="js/language.js?v=journal-mobile-map-20261018"></script><script src="js/theme.js?v=theme-transition-20261018"></script><script src="js/chat-config.js?v=portfolio-ai-20261018"></script>
   <script src="js/portfolio-tools.js?v=portfolio-guide-20261018"></script>
-  <script src="js/journal.js?v=journal-20261018"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="js/photo-index.js?v=locations-20261018"></script>
+  <script src="js/journal.js?v=journal-focus-glow-20261018"></script>
 </body>
 </html>
