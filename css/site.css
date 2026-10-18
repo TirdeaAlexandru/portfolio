@@ -2039,6 +2039,16 @@ html[data-theme="dark"] .prints-primary { border-color: #e8e3dc; background: #e8
 html[data-theme="dark"] .prints-primary:hover { background: #d4c7b8; }
 html[data-theme="dark"] .print-grid .print-card { color: var(--ink); }
 html[data-theme="dark"] .contact-event-invite { border-color: var(--line); background: #232426; box-shadow: 0 14px 36px rgba(0,0,0,.18); }
+html[data-theme="dark"] .portfolio-guide-panel { border-color: #414245; background: #202123; color: #f1efec; }
+html[data-theme="dark"] .portfolio-guide-welcome { color: #c1beb8; }
+html[data-theme="dark"] .portfolio-guide-message--assistant { background: #2b2c30; color: #f1efec; }
+html[data-theme="dark"] .portfolio-guide-message--assistant a { color: #e3bd96; }
+html[data-theme="dark"] .portfolio-guide-prompts button { border-color: #494a4d; background: #242528; color: #e9e6e1; }
+html[data-theme="dark"] .portfolio-guide-prompts button:hover,
+html[data-theme="dark"] .portfolio-guide-prompts button:focus-visible { border-color: #bda084; background: #303033; }
+html[data-theme="dark"] .portfolio-guide-form input { border-color: #494a4d; background: #1b1c1e; color: #f1efec; }
+html[data-theme="dark"] .portfolio-guide-form input::placeholder { color: #aaa7a2; }
+html[data-theme="dark"] .portfolio-guide-close { color: #f1efec; }
 
 /* The home page has its own charcoal look; light mode makes it match the rest. */
 html[data-theme="light"] .home-page { --bg: #f7f6f3; --ink: #111; --muted: #77736d; background: var(--bg); color: var(--ink); }
