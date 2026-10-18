@@ -446,6 +446,87 @@ img {
   transform: scale(1.025);
 }
 
+.filmmic-feature {
+  max-width: 680px;
+  margin: 22px 0 42px;
+}
+
+.certificate-group {
+  margin: 0 0 34px;
+}
+
+.certificate-group .award-highlights {
+  margin: 16px auto 30px;
+}
+
+.award-certificate {
+  min-width: 0;
+  margin: 0;
+  padding: 12px;
+  background: #f0eeea;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: 0 14px 36px rgba(20, 20, 20, .08);
+}
+
+.certificate-preview {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: clamp(260px, 31vw, 350px);
+  overflow: hidden;
+  background: #292827;
+  border-radius: 4px;
+}
+
+.certificate-preview img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.award-certificate figcaption {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 13px 4px 3px;
+  color: var(--muted);
+  font-size: 11px;
+  letter-spacing: .08em;
+}
+
+.award-certificate figcaption strong {
+  color: var(--ink);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 23px;
+  font-style: italic;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+.certificate-contest {
+  min-height: 2.8em;
+  color: var(--muted);
+  font-size: 12px;
+  letter-spacing: .02em;
+  line-height: 1.4;
+}
+
+.certificate-downloads {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 7px;
+}
+
+.certificate-downloads a {
+  color: var(--ink);
+  font-size: 11px;
+  letter-spacing: .04em;
+  text-underline-offset: 3px;
+}
+
 .awards h2 {
   font-size: 12px;
   letter-spacing: 0.16em;
