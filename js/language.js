@@ -169,6 +169,31 @@
       const translated = translations[trimmed];
       if (translated) node.nodeValue = source.replace(trimmed, current === "ro" ? translated : trimmed);
     }
+    // Keep the journal map in sync explicitly when the language is toggled.
+    // This map includes Leaflet-generated content, which the text-node pass may
+    // not reliably reach in every browser.
+    const journalMapCopy = document.querySelector(".journal-map-copy");
+    if (journalMapCopy) {
+      const mapCopy = current === "ro"
+        ? { kicker: "EUROPA", title: "O hartă a locurilor surprinse", intro: "Explorează orașele și răsfoiește toate fotografiile de mai jos.", note: "Explorează harta sau alege un oraș pentru a-i vedea fotografiile." }
+        : { kicker: "EUROPE", title: "A map of where the photographs lead", intro: "Explore the cities, then browse every photograph below.", note: "Explore the map or choose a city to browse its photographs." };
+      journalMapCopy.querySelector(".section-kicker").textContent = mapCopy.kicker;
+      journalMapCopy.querySelector("h2").textContent = mapCopy.title;
+      journalMapCopy.querySelector("p:last-child").textContent = mapCopy.intro;
+      const mapNote = document.querySelector(".journal-attribution");
+      if (mapNote) mapNote.textContent = mapCopy.note;
+      const mapElement = document.getElementById("journal-map");
+      if (mapElement) mapElement.setAttribute("aria-label", current === "ro" ? "Hartă interactivă a orașelor din jurnalul foto" : "Interactive map of the cities in the photo journal");
+      const cityNames = current === "ro"
+        ? { Bucharest: "București", Venice: "Veneția", Luxembourg: "Luxemburg", "Danube Delta": "Delta Dunării" }
+        : { Bucharest: "Bucharest", Venice: "Venice", Luxembourg: "Luxembourg", "Danube Delta": "Danube Delta" };
+      document.querySelectorAll(".journal-cities [data-city-focus]").forEach(function (button) {
+        const city = button.dataset.cityFocus;
+        button.textContent = cityNames[city] || city;
+      });
+      const cityList = document.querySelector(".journal-cities");
+      if (cityList) cityList.setAttribute("aria-label", current === "ro" ? "Răsfoiește fotografiile după locație" : "Browse photographs by location");
+    }
     document.querySelectorAll("[alt], [aria-label], [title], meta[name='description']").forEach(function (el) {
       if (el.closest && el.closest("[data-language-fixed='en']")) return;
       let savedAttributes = originalAttributes.get(el);
