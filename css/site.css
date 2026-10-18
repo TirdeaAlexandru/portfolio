@@ -2209,6 +2209,10 @@ html[data-theme="dark"] .intro-signature { filter: invert(1); }
 .portfolio-guide-message { width: fit-content; max-width: 92%; margin: 0; padding: 9px 11px; border-radius: 12px; font-size: 12px; line-height: 1.55; }
 .portfolio-guide-message--user { justify-self: end; background: var(--ink); color: var(--bg); border-bottom-right-radius: 3px; }
 .portfolio-guide-message--assistant { justify-self: start; background: var(--surface, #f0eeea); color: var(--ink); border-bottom-left-radius: 3px; }
+.home-page .portfolio-guide-message--assistant,
+html[data-theme="dark"] .portfolio-guide-message--assistant { background: #2b2c30; color: #f1efec; }
+.home-page .portfolio-guide-message--assistant a,
+html[data-theme="dark"] .portfolio-guide-message--assistant a { color: #e3bd96; }
 .portfolio-guide-prompts { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 12px; }
 .portfolio-guide-prompts button { border: 1px solid var(--line); border-radius: 999px; padding: 7px 10px; background: transparent; color: var(--ink); cursor: pointer; font: 11px/1.2 var(--font-body); }
 .portfolio-guide-form { display: flex; gap: 8px; }
