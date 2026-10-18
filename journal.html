@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>try { if (sessionStorage.getItem("portfolio-entrance-seen")) document.documentElement.classList.add("portfolio-visited"); else sessionStorage.setItem("portfolio-entrance-seen", "1"); } catch (_) {}</script>
+  <title>Photo Journal — Alexandru Țîrdea</title>
+  <meta name="description" content="A photo journal of places photographed by Alexandru Țîrdea.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500;1,600&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/site.css?v=theme-transition-20261018">
+</head>
+<body>
+  <header class="header">
+    <a class="logo" href="index.html">Alexandru Țîrdea</a>
+    <button class="menu-toggle" type="button" aria-label="Menu"><span></span></button>
+    <nav class="nav">
+      <div class="drop"><button type="button">Photography</button><div class="drop-menu"><a href="work.html">Selected</a><a href="street.html">Street</a><a href="landscape.html">Landscape</a><a href="events.html">Events</a><a href="people.html">People</a><a href="nature.html">Nature & Wildlife</a><a href="still-life.html">Still Life</a></div></div>
+      <a href="journal.html" aria-current="page">Photo Journal</a><a href="films.html">Short Films</a><a href="awards.html">Awards</a><a href="prints.html">Prints</a><a href="contact.html">Contact</a>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark mode" aria-pressed="false" title="Switch to dark mode"><span class="theme-toggle-icon" aria-hidden="true">☾</span><span class="sr-only">Theme</span></button>
+      <div class="language-switch" role="group" aria-label="Alege limba"><span class="language-label" data-language-label="ro">RO</span><button type="button" class="language-slider" data-language-toggle aria-label="Schimbă în engleză" aria-pressed="false"><span class="sr-only">Schimbă limba</span></button><span class="language-label" data-language-label="en">EN</span></div>
+    </nav>
+  </header>
+  <main class="page journal-page">
+    <header class="journal-heading"><p class="section-kicker">Photography / Places</p><h1>Photo journal</h1><p>Photographs connected to places, with locations added only when confirmed.</p></header>
+    <section class="journal-map-section" aria-labelledby="journal-map-title">
+      <div class="journal-map-copy"><p class="section-kicker">EUROPE</p><h2 id="journal-map-title">A map of where the photographs lead</h2><p>Choose a city to see the photographs currently placed there.</p></div>
+      <div class="journal-map" aria-label="Map of Europe with portfolio locations">
+        <iframe title="OpenStreetMap of Europe" src="https://www.openstreetmap.org/export/embed.html?bbox=4.5%2C39.0%2C30.5%2C54.5&amp;layer=mapnik" loading="lazy"></iframe>
+        <button class="journal-pin" style="--x:90%;--y:60%" data-city="Galați" aria-label="Galați">1</button>
+        <button class="journal-pin" style="--x:30%;--y:60%" data-city="Venice" aria-label="Venice">2</button>
+        <button class="journal-pin" style="--x:6.5%;--y:36%" data-city="Metz" aria-label="Metz">3</button>
+        <button class="journal-pin" style="--x:10%;--y:40%" data-city="Nancy" aria-label="Nancy">4</button>
+        <button class="journal-pin" style="--x:12%;--y:32%" data-city="Luxembourg" aria-label="Luxembourg">5</button>
+        <button class="journal-pin" style="--x:34%;--y:12%" data-city="Berlin" aria-label="Berlin">6</button>
+      </div>
+      <p class="journal-attribution">Map data © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap contributors</a></p>
+      <div class="journal-cities" aria-label="Choose a city">
+        <button type="button" data-city-filter="Venice">Venice <span>1</span></button><button type="button" data-city-filter="Metz">Metz <span>2</span></button><button type="button" data-city-filter="Luxembourg">Luxembourg <span>2</span></button><button type="button" data-city-filter="Galați">Galați</button><button type="button" data-city-filter="Nancy">Nancy</button><button type="button" data-city-filter="Berlin">Berlin</button><button type="button" data-city-filter="Unplaced">To place</button>
+      </div>
+    </section>
+    <section class="journal-entries" aria-label="Photographs by location">
+      <article class="journal-entry" data-city-entry="Venice"><h2>Venice</h2><p>Canals, light, and movement on the water.</p><div class="journal-photos"><a href="images/22-dsc_6921-7-7.jpg"><img src="images/22-dsc_6921-7-7.jpg" alt="Boats crossing Venice’s Grand Canal beneath Santa Maria della Salute" loading="lazy"></a></div></article>
+      <article class="journal-entry" data-city-entry="Metz"><h2>Metz</h2><p>Quiet passages and pale façades.</p><div class="journal-photos"><a id="photo-50-_dsc3112-59-38" href="images/50-_dsc3112-59-38.jpg"><img src="images/50-_dsc3112-59-38.jpg" alt="A narrow Metz alley with a no-entry sign" loading="lazy"></a><a id="photo-51-_dsc3204-60-39" href="images/51-_dsc3204-60-39.jpg"><img src="images/51-_dsc3204-60-39.jpg" alt="Pale Metz façade with blue windows" loading="lazy"></a></div></article>
+      <article class="journal-entry" data-city-entry="Luxembourg"><h2>Luxembourg</h2><p>Street life and a quiet park-side view.</p><div class="journal-photos"><a id="photo-53-_dsc3330-62-41" href="images/53-_dsc3330-62-41.jpg"><img src="images/53-_dsc3330-62-41.jpg" alt="Pedestrian street in Luxembourg" loading="lazy"></a><a id="photo-62-_dsc3907-hdr-pano-71-50" href="images/62-_dsc3907-hdr-pano-71-50.jpg"><img src="images/62-_dsc3907-hdr-pano-71-50.jpg" alt="Water and trees in Luxembourg at dusk" loading="lazy"></a></div></article>
+      <article class="journal-entry journal-entry--pending" data-city-entry="Unplaced"><h2>Location to confirm</h2><p>This photograph is waiting for a city match.</p><div class="journal-photos"><a id="photo-65-_dsc4030-12-12" href="images/65-_dsc4030-12-12.jpg"><img src="images/65-_dsc4030-12-12.jpg" alt="A small boat beside the water; location to confirm" loading="lazy"></a></div></article>
+      <p class="journal-empty" hidden>There are no confirmed photos for this city yet. More locations will appear as we place the images.</p>
+    </section>
+  </main>
+  <footer class="footer"><img class="footer-signature" src="images/signature.png" alt="Alexandru Țîrdea signature" draggable="false"><span>© Alexandru Țîrdea 2026</span><a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=tirdea.alex2020%40gmail.com">tirdea.alex2020@gmail.com</a></footer>
+  <script src="js/site.js?v=portfolio-bilingual-v2-20261018"></script><script src="js/language.js?v=portfolio-bilingual-v2-20261018"></script><script src="js/theme.js?v=theme-transition-20261018"></script><script src="js/chat-config.js?v=portfolio-ai-20261018"></script>
+  <script src="js/portfolio-tools.js?v=portfolio-guide-20261018"></script>
+  <script src="js/journal.js?v=journal-20261018"></script>
+</body>
+</html>

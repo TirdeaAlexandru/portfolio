@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ro">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>try { if (sessionStorage.getItem("portfolio-entrance-seen")) document.documentElement.classList.add("portfolio-visited"); else sessionStorage.setItem("portfolio-entrance-seen", "1"); } catch (_) {}</script>
   <title>Short Films — Alexandru Țîrdea</title>
   <meta name="description" content="Short films and cinematic work by Alexandru Țîrdea.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500;1,600&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/site.css?v=mobile-flow-final-20261018">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500;1,600&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/site.css?v=theme-transition-20261018">
 </head>
 <body>
   <header class="header">
@@ -19,6 +20,7 @@
         <button type="button">Photography</button>
         <div class="drop-menu">
           <a href="work.html">Selected</a>
+          <a href="journal.html">Photo Journal</a>
           <a href="street.html">Street</a>
           <a href="landscape.html">Landscape</a>
           <a href="events.html">Events</a>
@@ -29,8 +31,11 @@
       </div>
       <a href="films.html" class="is-active">Short Films</a>
       <a href="awards.html">Awards</a>
+      <a href="prints.html">Prints</a>
       <a href="contact.html">Contact</a>
-    </nav>
+          <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark mode" aria-pressed="false" title="Switch to dark mode"><span class="theme-toggle-icon" aria-hidden="true">☾</span><span class="sr-only">Theme</span></button>
+          <div class="language-switch" role="group" aria-label="Alege limba"><span class="language-label" data-language-label="ro">RO</span><button type="button" class="language-slider" data-language-toggle aria-label="Schimbă în engleză" aria-pressed="false"><span class="sr-only">Schimbă limba</span></button><span class="language-label" data-language-label="en">EN</span></div>
+</nav>
   </header>
 
   <main class="films-page">
@@ -41,34 +46,32 @@
     </header>
 
     <section class="films-grid" aria-label="Selected short films">
-      <article class="film-card">
-        <div class="film-player" data-video-id="QNT9qOp_HxU">
-          <iframe src="https://www.youtube.com/embed/QNT9qOp_HxU?rel=0&amp;playsinline=1" title="The idea of you — Romance &amp; Drama" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-          <a class="film-fallback" href="https://youtu.be/QNT9qOp_HxU" target="_blank" rel="noopener" hidden><img src="https://i.ytimg.com/vi/QNT9qOp_HxU/hqdefault.jpg" alt=""><span>Watch on YouTube <b aria-hidden="true">↗</b></span></a>
+      <article class="film-card film-card-featured">
+        <div class="film-player" data-video-id="nbU5wu_DVkY">
+          <iframe src="https://www.youtube.com/embed/nbU5wu_DVkY?rel=0&amp;playsinline=1" title="Alexandru Țîrdea — Showreel" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <a class="film-fallback" href="https://youtu.be/nbU5wu_DVkY" target="_blank" rel="noopener" hidden><img src="https://i.ytimg.com/vi/nbU5wu_DVkY/maxresdefault.jpg" alt="" data-thumbnail-fallbacks="https://i.ytimg.com/vi/nbU5wu_DVkY/sddefault.jpg|https://i.ytimg.com/vi/nbU5wu_DVkY/hqdefault.jpg"><span>Watch on YouTube <b aria-hidden="true">↗</b></span></a>
         </div>
-        <div class="film-caption"><div><p class="film-number">01 / SHORT FILM</p><h2>The idea of you</h2></div><a href="https://youtu.be/QNT9qOp_HxU" target="_blank" rel="noopener">Watch on YouTube ↗</a></div>
-      </article>
-      <article class="film-card">
-        <div class="film-player" data-video-id="voSyRugeDDY">
-          <iframe src="https://www.youtube.com/embed/voSyRugeDDY?rel=0&amp;playsinline=1" title="Midnight Oil" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-          <a class="film-fallback" href="https://youtu.be/voSyRugeDDY" target="_blank" rel="noopener" hidden><img src="https://i.ytimg.com/vi/voSyRugeDDY/hqdefault.jpg" alt=""><span>Watch on YouTube <b aria-hidden="true">↗</b></span></a>
-        </div>
-        <div class="film-caption"><div><p class="film-number">02 / SHORT FILM</p><h2>Midnight Oil</h2></div><a href="https://youtu.be/voSyRugeDDY" target="_blank" rel="noopener">Watch on YouTube ↗</a></div>
+        <div class="film-caption"><div><p class="film-number">FEATURED VIDEO · SHOWREEL</p><h2>Selected moving images</h2></div><a href="https://youtu.be/nbU5wu_DVkY" target="_blank" rel="noopener">Watch on YouTube ↗</a></div>
       </article>
       <article class="film-card">
         <div class="film-player" data-video-id="AoYSDVsJCks">
-          <iframe src="https://www.youtube.com/embed/AoYSDVsJCks?rel=0&amp;playsinline=1" title="A day in Bucharest — Cinematic Video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-          <a class="film-fallback" href="https://youtu.be/AoYSDVsJCks" target="_blank" rel="noopener" hidden><img src="https://i.ytimg.com/vi/AoYSDVsJCks/hqdefault.jpg" alt=""><span>Watch on YouTube <b aria-hidden="true">↗</b></span></a>
+          <iframe src="https://www.youtube.com/embed/AoYSDVsJCks?rel=0&amp;playsinline=1" title="A Day in Bucharest — Cinematic Video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <a class="film-fallback" href="https://youtu.be/AoYSDVsJCks" target="_blank" rel="noopener" hidden><img src="https://i.ytimg.com/vi/AoYSDVsJCks/maxresdefault.jpg" alt="" data-thumbnail-fallbacks="https://i.ytimg.com/vi/AoYSDVsJCks/sddefault.jpg|https://i.ytimg.com/vi/AoYSDVsJCks/hqdefault.jpg"><span>Watch on YouTube <b aria-hidden="true">↗</b></span></a>
         </div>
-        <div class="film-caption"><div><p class="film-number">03 / CINEMATIC VIDEO</p><h2>A day in Bucharest</h2></div><a href="https://youtu.be/AoYSDVsJCks" target="_blank" rel="noopener">Watch on YouTube ↗</a></div>
+        <div class="film-caption"><div><p class="film-number">CINEMATIC VIDEO</p><h2>A Day in Bucharest</h2></div><a href="https://youtu.be/AoYSDVsJCks" target="_blank" rel="noopener">Watch on YouTube ↗</a></div>
       </article>
     </section>
   </main>
 
   <footer class="footer">
+    <img class="footer-signature" src="images/signature.png" alt="Alexandru Țîrdea signature" draggable="false">
     <span>© Alexandru Țîrdea 2026</span>
-    <a href="mailto:tirdea.alex2020@gmail.com">tirdea.alex2020@gmail.com</a>
+    <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=tirdea.alex2020%40gmail.com">tirdea.alex2020@gmail.com</a>
   </footer>
-  <script src="js/site.js"></script>
+  <script src="js/site.js?v=portfolio-bilingual-v2-20261018"></script>
+  <script src="js/language.js?v=portfolio-bilingual-v2-20261018"></script>
+  <script src="js/theme.js?v=theme-transition-20261018"></script>
+  <script src="js/chat-config.js?v=portfolio-ai-20261018"></script>
+  <script src="js/portfolio-tools.js?v=portfolio-guide-20261018"></script>
 </body>
 </html>

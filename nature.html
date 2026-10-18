@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ro">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>try { if (sessionStorage.getItem("portfolio-entrance-seen")) document.documentElement.classList.add("portfolio-visited"); else sessionStorage.setItem("portfolio-entrance-seen", "1"); } catch (_) {}</script>
   <title>Nature & Wildlife — Alexandru Țîrdea</title>
   <meta name="description" content="Photography portfolio of Alexandru Țîrdea.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500;1,600&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/site.css?v=mobile-flow-final-20261018">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500;1,600&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/site.css?v=theme-transition-20261018">
 </head>
 <body>
 
@@ -20,6 +21,7 @@
         <button type="button">Photography</button>
         <div class="drop-menu">
           <a href="work.html">Selected</a>
+          <a href="journal.html">Photo Journal</a>
           <a href="street.html">Street</a>
           <a href="landscape.html" aria-current="page">Landscape</a>
           <a href="events.html">Events</a>
@@ -30,11 +32,14 @@
       </div>
       <a href="films.html">Short Films</a>
       <a href="awards.html">Awards</a>
+      <a href="prints.html">Prints</a>
       <a href="contact.html">Contact</a>
-    </nav>
+          <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark mode" aria-pressed="false" title="Switch to dark mode"><span class="theme-toggle-icon" aria-hidden="true">☾</span><span class="sr-only">Theme</span></button>
+          <div class="language-switch" role="group" aria-label="Alege limba"><span class="language-label" data-language-label="ro">RO</span><button type="button" class="language-slider" data-language-toggle aria-label="Schimbă în engleză" aria-pressed="false"><span class="sr-only">Schimbă limba</span></button><span class="language-label" data-language-label="en">EN</span></div>
+</nav>
   </header>
 <main class="page collection-page collection-page--nature">
-  <header class="collection-heading collection-heading--compact">
+  <header class="collection-heading">
     <p class="section-kicker">Photography / Collection</p>
     <h1>Nature & Wildlife</h1>
     <p>Animals, birds, and small details from the natural world.</p>
@@ -49,19 +54,24 @@
     </nav>
   </header>
   <div class="gallery">
-<a href="images/02-1-53-1-1.jpg" data-full="images/02-1-53-1-1.jpg"><img src="images/02-1-53-1-1.jpg" alt="Photograph by Alexandru Țîrdea" loading="lazy"></a>
-<a href="images/06-dsc_0703-2-2v2-21-57.jpg" data-full="images/06-dsc_0703-2-2v2-21-57.jpg"><img src="images/06-dsc_0703-2-2v2-21-57.jpg" alt="Photograph by Alexandru Țîrdea" loading="lazy"></a>
-<a href="images/14-dsc_4324-33-18.jpg" data-full="images/14-dsc_4324-33-18.jpg"><img src="images/14-dsc_4324-33-18.jpg" alt="Photograph by Alexandru Țîrdea" loading="lazy"></a>
-<a href="images/21-dsc_5696-14-14.jpg" data-full="images/21-dsc_5696-14-14.jpg"><img src="images/21-dsc_5696-14-14.jpg" alt="Photograph by Alexandru Țîrdea" loading="lazy"></a>
-<a href="images/24-dsc_7440-copy-9-9.jpg" data-full="images/24-dsc_7440-copy-9-9.jpg"><img src="images/24-dsc_7440-copy-9-9.jpg" alt="Photograph by Alexandru Țîrdea" loading="lazy"></a>
-<a href="images/29-dsc_9148-copy-1-6.jpg" data-full="images/29-dsc_9148-copy-1-6.jpg"><img src="images/29-dsc_9148-copy-1-6.jpg" alt="Photograph by Alexandru Țîrdea" loading="lazy"></a>
-<a href="images/34-tirdea_alexandru-pescarusul_ratacit-11-11.jpg" data-full="images/34-tirdea_alexandru-pescarusul_ratacit-11-11.jpg"><img src="images/34-tirdea_alexandru-pescarusul_ratacit-11-11.jpg" alt="Photograph by Alexandru Țîrdea" loading="lazy"></a>
-<a href="images/38-_dsc1864-46-26.jpg" data-full="images/38-_dsc1864-46-26.jpg"><img src="images/38-_dsc1864-46-26.jpg" alt="Photograph by Alexandru Țîrdea" loading="lazy"></a>
+<a href="images/02-1-53-1-1.jpg" data-full="images/02-1-53-1-1.jpg" id="photo-02-1-53-1-1" data-search="animal bird cat eyes nature pet plant portrait wildlife"><img src="images/02-1-53-1-1.jpg" alt="Photograph by Alexandru Țîrdea" loading="lazy"></a>
+<a href="images/06-dsc_0703-2-2v2-21-57.jpg" data-full="images/06-dsc_0703-2-2v2-21-57.jpg" id="photo-06-dsc_0703-2-2v2-21-57" data-search="animal bird birds lake nature pair plant reflection swans water wildlife"><img src="images/06-dsc_0703-2-2v2-21-57.jpg" alt="Photograph by Alexandru Țîrdea" loading="lazy"></a>
+<a href="images/14-dsc_4324-33-18.jpg" data-full="images/14-dsc_4324-33-18.jpg" id="photo-14-dsc_4324-33-18" data-search="animal bird dark nature plant reflection water wildlife"><img src="images/14-dsc_4324-33-18.jpg" alt="Photograph by Alexandru Țîrdea" loading="lazy"></a>
+<a href="images/21-dsc_5696-14-14.jpg" data-full="images/21-dsc_5696-14-14.jpg" id="photo-21-dsc_5696-14-14" data-search="animal bird black flying monochrome nature plant sky streetlight white wildlife"><img src="images/21-dsc_5696-14-14.jpg" alt="Photograph by Alexandru Țîrdea" loading="lazy"></a>
+<a href="images/24-dsc_7440-copy-9-9.jpg" data-full="images/24-dsc_7440-copy-9-9.jpg" id="photo-24-dsc_7440-copy-9-9" data-search="animal bee bird dragonfly flowers insect macro nature plant wildlife"><img src="images/24-dsc_7440-copy-9-9.jpg" alt="Photograph by Alexandru Țîrdea" loading="lazy"></a>
+<a href="images/29-dsc_9148-copy-1-6.jpg" data-full="images/29-dsc_9148-copy-1-6.jpg" id="photo-29-dsc_9148-copy-1-6" data-search="animal bird green nature perched plant sparrow wildlife"><img src="images/29-dsc_9148-copy-1-6.jpg" alt="Photograph by Alexandru Țîrdea" loading="lazy"></a>
+<a href="images/34-tirdea_alexandru-pescarusul_ratacit-11-11.jpg" data-full="images/34-tirdea_alexandru-pescarusul_ratacit-11-11.jpg" id="photo-34-tirdea_alexandru-pescarusul_ratacit-11-11" data-search="animal bird nature plant sea seagull water waves wildlife"><img src="images/34-tirdea_alexandru-pescarusul_ratacit-11-11.jpg" alt="Photograph by Alexandru Țîrdea" loading="lazy"></a>
+<a href="images/38-_dsc1864-46-26.jpg" data-full="images/38-_dsc1864-46-26.jpg" id="photo-38-_dsc1864-46-26" data-search="animal bird black cat nature pet plant portrait wildlife"><img src="images/38-_dsc1864-46-26.jpg" alt="Photograph by Alexandru Țîrdea" loading="lazy"></a>
 </div></main>
   <footer class="footer">
+    <img class="footer-signature" src="images/signature.png" alt="Alexandru Țîrdea signature" draggable="false">
     <span>© Alexandru Țîrdea 2026</span>
-    <a href="mailto:tirdea.alex2020@gmail.com">tirdea.alex2020@gmail.com</a>
+    <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=tirdea.alex2020%40gmail.com">tirdea.alex2020@gmail.com</a>
   </footer>
-  <script src="js/site.js?v=gallery-contact-20261018"></script>
+  <script src="js/site.js?v=portfolio-bilingual-v2-20261018"></script>
+  <script src="js/language.js?v=portfolio-bilingual-v2-20261018"></script>
+  <script src="js/theme.js?v=theme-transition-20261018"></script>
+  <script src="js/chat-config.js?v=portfolio-ai-20261018"></script>
+  <script src="js/portfolio-tools.js?v=portfolio-guide-20261018"></script>
 </body>
 </html>

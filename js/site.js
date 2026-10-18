@@ -36,6 +36,15 @@
     btn.setAttribute("aria-expanded", "false");
   }
 
+  document.querySelectorAll("img[data-thumbnail-fallbacks]").forEach(function (image) {
+    const fallbacks = (image.dataset.thumbnailFallbacks || "").split("|").filter(Boolean);
+    image.addEventListener("error", function () {
+      const next = fallbacks.shift();
+      if (next) image.src = next;
+    });
+    if (image.complete && image.naturalWidth === 0) image.dispatchEvent(new Event("error"));
+  });
+
   // Local file previews have no web origin for YouTube's embed player. Show
   // the video's thumbnail and a direct YouTube link until the page is hosted.
   if (window.location.protocol === "file:") {
@@ -49,8 +58,26 @@
     });
   }
 
-  const items = Array.from(document.querySelectorAll(".gallery a[data-full]"));
-  document.querySelectorAll(".gallery img").forEach(function (image) {
+  document.querySelectorAll(".footer-signature, .intro-signature").forEach(function (image) {
+    image.draggable = false;
+    image.addEventListener("contextmenu", function (event) { event.preventDefault(); });
+    image.addEventListener("dragstart", function (event) { event.preventDefault(); });
+  });
+
+  document.querySelectorAll(".award-certificate img").forEach(function (image) {
+    image.draggable = false;
+    image.addEventListener("contextmenu", function (event) { event.preventDefault(); });
+    image.addEventListener("dragstart", function (event) { event.preventDefault(); });
+  });
+
+  const items = Array.from(document.querySelectorAll(".gallery a[data-full], .print-grid a[data-full]"));
+  document.addEventListener("contextmenu", function (event) {
+    if (event.target instanceof Element && event.target.closest(".gallery, .print-grid, .lightbox")) {
+      event.preventDefault();
+    }
+  }, true);
+
+  document.querySelectorAll(".gallery img, .print-grid img").forEach(function (image) {
     image.decoding = "async";
     image.draggable = false;
     image.addEventListener("contextmenu", function (event) {
@@ -123,19 +150,27 @@
   if (!items.length) return;
 
   const box = document.createElement("div");
+  const isRomanian = window.portfolioLanguage && window.portfolioLanguage() === "ro";
   box.className = "lightbox";
   box.setAttribute("role", "dialog");
   box.setAttribute("aria-modal", "true");
-  box.setAttribute("aria-label", "Photo viewer");
+  box.setAttribute("aria-label", isRomanian ? "Vizualizator foto" : "Photo viewer");
   box.innerHTML =
-    '<button class="close" type="button" aria-label="Close">×</button>' +
-    '<button class="prev" type="button" aria-label="Previous">‹</button>' +
+    '<button class="close" type="button" aria-label="' + (isRomanian ? "Închide" : "Close") + '">×</button>' +
+    '<button class="prev" type="button" aria-label="' + (isRomanian ? "Anterior" : "Previous") + '">‹</button>' +
     '<img alt="" draggable="false">' +
-    '<button class="next" type="button" aria-label="Next">›</button>' +
-    '<a class="print-contact" href="mailto:tirdea.alex2020@gmail.com">Want a print or full-resolution file? Contact me</a>';
+    '<button class="next" type="button" aria-label="' + (isRomanian ? "Următorul" : "Next") + '">›</button>' +
+    '<a class="print-contact" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=tirdea.alex2020%40gmail.com" target="_blank" rel="noopener">' + (isRomanian ? "Vrei un print sau fișierul la rezoluție maximă? Contactează-mă" : "Want a print or full-resolution file? Contact me") + "</a>";
   document.body.appendChild(box);
 
   const img = box.querySelector("img");
+  img.draggable = false;
+  img.addEventListener("contextmenu", function (event) {
+    event.preventDefault();
+  });
+  img.addEventListener("dragstart", function (event) {
+    event.preventDefault();
+  });
   const printContact = box.querySelector(".print-contact");
   const closeButton = box.querySelector(".close");
   const focusable = Array.from(box.querySelectorAll("button, a[href]"));
@@ -145,13 +180,23 @@
 
   function openAt(i, moveFocus) {
     index = (i + items.length) % items.length;
+    const romanian = window.portfolioLanguage && window.portfolioLanguage() === "ro";
+    box.setAttribute("aria-label", romanian ? "Vizualizator foto" : "Photo viewer");
+    closeButton.setAttribute("aria-label", romanian ? "Închide" : "Close");
+    box.querySelector(".prev").setAttribute("aria-label", romanian ? "Anterior" : "Previous");
+    box.querySelector(".next").setAttribute("aria-label", romanian ? "Următorul" : "Next");
+    printContact.textContent = romanian ? "Vrei un print sau fișierul la rezoluție maximă? Contactează-mă" : "Want a print or full-resolution file? Contact me";
     img.src = items[index].getAttribute("data-full");
     img.alt = items[index].querySelector("img").alt || "";
     const fileName = img.src.split("/").pop().replace(/\.[^.]+$/, "");
     const photoName = items[index].querySelector("img").alt || fileName;
-    printContact.href = "mailto:tirdea.alex2020@gmail.com?subject=" +
-      encodeURIComponent("Photo print or full-resolution inquiry") +
-      "&body=" + encodeURIComponent("Hello, I’m interested in a print or full-resolution file of “" + photoName + "”.");
+    const compose = new URL("https://mail.google.com/mail/");
+    compose.searchParams.set("view", "cm");
+    compose.searchParams.set("fs", "1");
+    compose.searchParams.set("to", "tirdea.alex2020@gmail.com");
+    compose.searchParams.set("su", romanian ? "Întrebare despre print sau fișier foto" : "Photo print or full-resolution inquiry");
+    compose.searchParams.set("body", romanian ? "Bună, sunt interesat(ă) de un print sau de fișierul la rezoluție maximă pentru fotografia „" + photoName + "”." : "Hello, I’m interested in a print or full-resolution file of “" + photoName + "”.");
+    printContact.href = compose.toString();
     box.classList.add("is-open");
     document.body.style.overflow = "hidden";
     if (moveFocus) closeButton.focus();
@@ -165,6 +210,7 @@
   }
 
   items.forEach(function (el, i) {
+    el.draggable = false;
     el.addEventListener("contextmenu", function (event) {
       event.preventDefault();
     });

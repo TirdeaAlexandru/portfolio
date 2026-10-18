@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ro">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>try { if (sessionStorage.getItem("portfolio-entrance-seen")) document.documentElement.classList.add("portfolio-visited"); else sessionStorage.setItem("portfolio-entrance-seen", "1"); } catch (_) {}</script>
   <title>Awards — Alexandru Țîrdea</title>
   <meta name="description" content="Photography portfolio of Alexandru Țîrdea.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500;1,600&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/site.css?v=mobile-flow-final-20261018">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500;1,600&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/site.css?v=theme-transition-20261018">
 </head>
 <body>
 
@@ -20,6 +21,7 @@
         <button type="button">Photography</button>
         <div class="drop-menu">
           <a href="work.html">Selected</a>
+          <a href="journal.html">Photo Journal</a>
           <a href="street.html">Street</a>
           <a href="landscape.html">Landscape</a>
           <a href="events.html">Events</a>
@@ -30,8 +32,11 @@
       </div>
       <a href="films.html">Short Films</a>
       <a href="awards.html" class="is-active">Awards</a>
+      <a href="prints.html">Prints</a>
       <a href="contact.html">Contact</a>
-    </nav>
+          <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark mode" aria-pressed="false" title="Switch to dark mode"><span class="theme-toggle-icon" aria-hidden="true">☾</span><span class="sr-only">Theme</span></button>
+          <div class="language-switch" role="group" aria-label="Alege limba"><span class="language-label" data-language-label="ro">RO</span><button type="button" class="language-slider" data-language-toggle aria-label="Schimbă în engleză" aria-pressed="false"><span class="sr-only">Schimbă limba</span></button><span class="language-label" data-language-label="en">EN</span></div>
+</nav>
   </header>
 
 <main class="awards">
@@ -48,7 +53,7 @@
   </figure>
 
   <ul>
-    <li><span><a href="https://www.viata-libera.ro/educatie/263161-premiul-i-si-mentiune-pentru-colegiul-national-%E2%80%9Ecostache-negri%E2%80%9D-la-boovie-2026" target="_blank" rel="noopener">Boovie — Animo-Z</a> <span class="award-credit">Directed &amp; edited</span></span><span class="prize">1st Prize · Pocket Trailer</span></li>
+    <li><span class="award-entry"><a class="award-entry-thumb" href="https://www.youtube.com/watch?v=ocMrNN3R2Ac" target="_blank" rel="noopener" aria-label="Watch Lady Tan’s Circle of Women on YouTube — Boovie 2026 first prize"><img src="https://i.ytimg.com/vi/ocMrNN3R2Ac/hqdefault.jpg" alt="Video thumbnail for Lady Tan’s Circle of Women" loading="lazy"><span aria-hidden="true">▶</span></a><span class="award-entry-copy"><span><a href="https://www.viata-libera.ro/educatie/263161-premiul-i-si-mentiune-pentru-colegiul-national-%E2%80%9Ecostache-negri%E2%80%9D-la-boovie-2026" target="_blank" rel="noopener">Lady Tan’s Circle of Women</a> <span class="award-credit">Directed &amp; edited</span></span><a class="award-video-link" href="https://www.youtube.com/watch?v=ocMrNN3R2Ac" target="_blank" rel="noopener">Watch on YouTube ↗</a></span></span><span class="prize">1st Prize · Pocket Trailer</span></li>
   </ul>
 
   <h3>TopPhotoAwards · 2026</h3>
@@ -56,14 +61,13 @@
       <h3>Top 20</h3>
       <div class="award-highlights">
       <figure class="award-certificate">
-        <a class="certificate-preview" href="images/awards/certificates/language-of-flowers-top-20.pdf" target="_blank" rel="noopener" aria-label="Open official Top 20 Award certificate for The Language of Flowers Photo Contest 2026">
+        <div class="certificate-preview" role="img" aria-label="TopPhotoAwards Top 20 certificate for The Language of Flowers Photo Contest 2026">
           <img src="images/awards/certificates/language-of-flowers-top-20.png" alt="Official TopPhotoAwards Top 20 Award certificate for The Language of Flowers Photo Contest 2026, dated September 11, 2026" loading="lazy">
-        </a>
+        </div>
         <figcaption>
           <span>TOPPHOTOAWARDS · SEPTEMBER 11, 2026</span>
           <strong>Top 20 Award</strong>
           <span class="certificate-contest">The Language of Flowers Photo Contest 2026</span>
-          <span class="certificate-downloads"><a href="images/awards/certificates/language-of-flowers-top-20.pdf" download>Download PDF ↓</a><a href="images/awards/certificates/language-of-flowers-top-20.png" download>Download PNG ↓</a></span>
         </figcaption>
       </figure>
       </div>
@@ -72,47 +76,43 @@
       <h3>Expert Choice</h3>
       <div class="award-highlights">
       <figure class="award-certificate">
-        <a class="certificate-preview" href="images/awards/certificates/conceptual-expert-choice.pdf" target="_blank" rel="noopener" aria-label="Open official Expert Choice certificate for Conceptual Photography Contest">
+        <div class="certificate-preview" role="img" aria-label="Open official Expert Choice certificate for Conceptual Photography Contest">
           <img src="images/awards/certificates/conceptual-expert-choice.png" alt="Official TopPhotoAwards Expert Choice certificate for Conceptual Photography Contest, dated March 20, 2026" loading="lazy">
-        </a>
+        </div>
         <figcaption>
           <span>TOPPHOTOAWARDS · MARCH 20, 2026</span>
           <strong>Expert Choice</strong>
           <span class="certificate-contest">Conceptual Photography Contest</span>
-          <span class="certificate-downloads"><a href="images/awards/certificates/conceptual-expert-choice.pdf" download>Download PDF ↓</a><a href="images/awards/certificates/conceptual-expert-choice.png" download>Download PNG ↓</a></span>
         </figcaption>
       </figure>
       <figure class="award-certificate">
-        <a class="certificate-preview" href="images/awards/certificates/fine-art-portrait-expert-choice.pdf" target="_blank" rel="noopener" aria-label="Open official Expert Choice certificate for Fine Art Portrait Photography Contest">
+        <div class="certificate-preview" role="img" aria-label="Open official Expert Choice certificate for Fine Art Portrait Photography Contest">
           <img src="images/awards/certificates/fine-art-portrait-expert-choice.png" alt="Official TopPhotoAwards Expert Choice certificate for Fine Art Portrait Photography Contest, dated July 24, 2026" loading="lazy">
-        </a>
+        </div>
         <figcaption>
           <span>TOPPHOTOAWARDS · JULY 24, 2026</span>
           <strong>Expert Choice</strong>
           <span class="certificate-contest">Fine Art Portrait Photography Contest</span>
-          <span class="certificate-downloads"><a href="images/awards/certificates/fine-art-portrait-expert-choice.pdf" download>Download PDF ↓</a><a href="images/awards/certificates/fine-art-portrait-expert-choice.png" download>Download PNG ↓</a></span>
         </figcaption>
       </figure>
       <figure class="award-certificate">
-        <a class="certificate-preview" href="images/awards/certificates/strike-a-pose-expert-choice.pdf" target="_blank" rel="noopener" aria-label="Open official Expert Choice certificate for Strike a Pose: Model Photo Contest 2026">
+        <div class="certificate-preview" role="img" aria-label="Open official Expert Choice certificate for Strike a Pose: Model Photo Contest 2026">
           <img src="images/awards/certificates/strike-a-pose-expert-choice.png" alt="Official TopPhotoAwards Expert Choice certificate for Strike a Pose: Model Photo Contest 2026, dated June 19, 2026" loading="lazy">
-        </a>
+        </div>
         <figcaption>
           <span>TOPPHOTOAWARDS · JUNE 19, 2026</span>
           <strong>Expert Choice</strong>
           <span class="certificate-contest">Strike a Pose: Model Photo Contest 2026</span>
-          <span class="certificate-downloads"><a href="images/awards/certificates/strike-a-pose-expert-choice.pdf" download>Download PDF ↓</a><a href="images/awards/certificates/strike-a-pose-expert-choice.png" download>Download PNG ↓</a></span>
         </figcaption>
       </figure>
       <figure class="award-certificate">
-        <a class="certificate-preview" href="images/awards/certificates/urban-architecture-expert-choice.pdf" target="_blank" rel="noopener" aria-label="Open official Expert Choice certificate for Urban Architecture Photography Contest">
+        <div class="certificate-preview" role="img" aria-label="Open official Expert Choice certificate for Urban Architecture Photography Contest">
           <img src="images/awards/certificates/urban-architecture-expert-choice.png" alt="Official TopPhotoAwards Expert Choice certificate for Urban Architecture Photography Contest, dated May 15, 2026" loading="lazy">
-        </a>
+        </div>
         <figcaption>
           <span>TOPPHOTOAWARDS · MAY 15, 2026</span>
           <strong>Expert Choice</strong>
           <span class="certificate-contest">Urban Architecture Photography Contest</span>
-          <span class="certificate-downloads"><a href="images/awards/certificates/urban-architecture-expert-choice.pdf" download>Download PDF ↓</a><a href="images/awards/certificates/urban-architecture-expert-choice.png" download>Download PNG ↓</a></span>
         </figcaption>
       </figure>
       </div>
@@ -121,14 +121,13 @@
       <h3>Top 50</h3>
       <div class="award-highlights">
       <figure class="award-certificate">
-        <a class="certificate-preview" href="images/awards/certificates/calm-clear-top-50.pdf" target="_blank" rel="noopener" aria-label="Open official Top 50 Award certificate for Calm & Clear: Minimalism Photography Contest">
+        <div class="certificate-preview" role="img" aria-label="Open official Top 50 Award certificate for Calm & Clear: Minimalism Photography Contest">
           <img src="images/awards/certificates/calm-clear-top-50.png" alt="Official TopPhotoAwards Top 50 Award certificate for Calm & Clear: Minimalism Photography Contest, dated July 10, 2026" loading="lazy">
-        </a>
+        </div>
         <figcaption>
           <span>TOPPHOTOAWARDS · JULY 10, 2026</span>
           <strong>Top 50 Award</strong>
           <span class="certificate-contest">“Lost” · Calm & Clear: Minimalism Photography Contest</span>
-          <span class="certificate-downloads"><a href="images/awards/certificates/calm-clear-top-50.pdf" download>Download PDF ↓</a><a href="images/awards/certificates/calm-clear-top-50.png" download>Download PNG ↓</a></span>
         </figcaption>
       </figure>
       </div>
@@ -138,14 +137,22 @@
 
   <h3>2025</h3>
   <figure class="award-feature filmmic-feature">
-    <a href="https://filmmic.ro/finalisti/" target="_blank" rel="noopener">
-      <img src="https://filmmic.ro/wp-content/uploads/2026/01/In-cautarea-fericirii.jpg" alt="In Search of Happiness, the FILMMIC 2025 finalist photograph showing a child running along a beach">
+    <a href="https://filmmic.ro/finalisti/" target="_blank" rel="noopener" aria-label="See the official FILMMIC finalists">
+      <img src="https://filmmic.ro/wp-content/uploads/2026/01/In-cautarea-fericirii.jpg" alt="In Search of Happiness, the FILMMIC 2025 finalist photograph showing a child running along a beach" loading="lazy">
     </a>
-    <figcaption><span>FILMMIC 17TH EDITION · PHOTOGRAPHY</span><strong>“In Search of Happiness” · 3rd Prize</strong><a href="https://filmmic.ro/finalisti/" target="_blank" rel="noopener">View the official finalists ↗</a></figcaption>
+    <figcaption><span>FILMMIC 17TH EDITION · PHOTOGRAPHY</span><strong>“In Search of Happiness” · 3rd Prize</strong><a href="https://filmmic.ro/finalisti/" target="_blank" rel="noopener">Official finalists ↗</a></figcaption>
   </figure>
-  <ul>
-    <li><span>Boovie — “Long Story Short” <span class="award-credit">Directed &amp; edited</span></span><span class="prize">Special Prize</span></li>
-  </ul>
+  <section class="award-film-grid" aria-label="Award-winning films">
+    <article class="award-film-card award-film-card--boovie">
+      <div class="award-film-frame">
+        <a class="award-video-poster" href="https://www.youtube.com/watch?v=_JRPqr8hubM" target="_blank" rel="noopener" aria-label="Watch A Good Life on YouTube — Boovie 2025 special prize">
+          <img src="https://i.ytimg.com/vi/_JRPqr8hubM/hqdefault.jpg" alt="Video thumbnail for A Good Life" loading="lazy">
+          <span class="award-video-play" aria-hidden="true">▶</span>
+        </a>
+      </div>
+      <div class="award-film-caption"><span>BOOVIE · BOOK TRAILER</span><h4>“A Good Life”</h4><p>Directed &amp; edited · Special Prize</p><a href="https://www.youtube.com/watch?v=_JRPqr8hubM" target="_blank" rel="noopener">Watch on YouTube ↗</a></div>
+    </article>
+  </section>
 
   <h2>National</h2>
   <h3>2025</h3>
@@ -156,9 +163,14 @@
 </main>
 
   <footer class="footer">
+    <img class="footer-signature" src="images/signature.png" alt="Alexandru Țîrdea signature" draggable="false">
     <span>© Alexandru Țîrdea 2026</span>
-    <a href="mailto:tirdea.alex2020@gmail.com">tirdea.alex2020@gmail.com</a>
+    <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=tirdea.alex2020%40gmail.com">tirdea.alex2020@gmail.com</a>
   </footer>
-  <script src="js/site.js?v=gallery-contact-20261018"></script>
+  <script src="js/site.js?v=awards-no-downloads-20261018"></script>
+  <script src="js/language.js?v=portfolio-bilingual-v2-20261018"></script>
+  <script src="js/theme.js?v=theme-transition-20261018"></script>
+  <script src="js/chat-config.js?v=portfolio-ai-20261018"></script>
+  <script src="js/portfolio-tools.js?v=portfolio-guide-20261018"></script>
 </body>
 </html>
