@@ -2354,3 +2354,7 @@ html[data-theme="dark"] .portfolio-guide-message--assistant a { color: #e3bd96; 
   .contact-panel h1 { font-size: 38px; }
   .contact-email, .contact-social { grid-template-columns: 72px minmax(0, 1fr) auto; }
 }
+
+/* Keep the contact biography readable without a decorative panel. */
+.contact-lede { max-width: 470px; margin: 16px 0 26px; color: var(--ink); font: 400 clamp(16px, 1.5vw, 19px)/1.55 var(--font-display); }
+.contact-note { font-size: 13px; letter-spacing: 0; }
