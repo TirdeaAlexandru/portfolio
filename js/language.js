@@ -58,8 +58,12 @@
     "Photography / Places": "Fotografie / Locuri", "Photo journal": "Jurnal foto",
     "Photographs connected to places, with locations added only when confirmed.": "Fotografii legate de locuri, cu locații adăugate doar după confirmare.",
     "EUROPE": "EUROPA", "A map of where the photographs lead": "O hartă a locurilor surprinse",
-    "Choose a city to see the photographs currently placed there.": "Alege un oraș pentru a vedea fotografiile asociate.",
-    "Choose a city": "Alege un oraș", "To place": "De plasat", "Location to confirm": "Locație de confirmat",
+    "Explore the cities, then browse every photograph below.": "Explorează orașele și răsfoiește toate fotografiile de mai jos.",
+    "Jump to a city on the map": "Mergi la un oraș de pe hartă", "Bucharest": "București",
+    "More photographs from home will be added here.": "Voi adăuga aici mai multe fotografii de acasă.",
+    "Photographs from Bucharest will be added here.": "Voi adăuga aici fotografii din București.",
+    "More photographs will be added here.": "Voi adăuga aici mai multe fotografii.",
+    "To place": "De plasat", "Location to confirm": "Locație de confirmat",
     "Quiet passages and pale façades.": "Pasaje liniștite și fațade deschise la culoare.",
     "Street life and a quiet park-side view.": "Viața străzii și o priveliște liniștită din parc.",
     "Canals, light, and movement on the water.": "Canale, lumină și mișcare pe apă.",
@@ -154,6 +158,7 @@
     const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
     let node;
     while ((node = walker.nextNode())) {
+      if (node.parentElement && node.parentElement.closest("[data-language-fixed='en']")) continue;
       if (!originals.has(node)) originals.set(node, node.nodeValue);
       const source = originals.get(node);
       const trimmed = source.trim();
@@ -161,6 +166,7 @@
       if (translated) node.nodeValue = source.replace(trimmed, current === "ro" ? translated : trimmed);
     }
     document.querySelectorAll("[alt], [aria-label], [title], meta[name='description']").forEach(function (el) {
+      if (el.closest && el.closest("[data-language-fixed='en']")) return;
       let savedAttributes = originalAttributes.get(el);
       if (!savedAttributes) { savedAttributes = {}; originalAttributes.set(el, savedAttributes); }
       ["alt", "aria-label", "title", "content"].forEach(function (attr) {

@@ -5,6 +5,10 @@
   if (toggle) {
     toggle.setAttribute("aria-expanded", "false");
     toggle.setAttribute("aria-controls", "primary-navigation");
+    if (new URLSearchParams(window.location.search).get("mobile-preview") === "1") {
+      document.body.classList.add("nav-open");
+      toggle.setAttribute("aria-expanded", "true");
+    }
     toggle.addEventListener("click", function () {
       const isOpen = document.body.classList.toggle("nav-open");
       toggle.setAttribute("aria-expanded", String(isOpen));
@@ -68,6 +72,11 @@
     image.draggable = false;
     image.addEventListener("contextmenu", function (event) { event.preventDefault(); });
     image.addEventListener("dragstart", function (event) { event.preventDefault(); });
+  });
+
+  document.querySelectorAll(".protected-photo-frame").forEach(function (frame) {
+    frame.addEventListener("contextmenu", function (event) { event.preventDefault(); });
+    frame.addEventListener("dragstart", function (event) { event.preventDefault(); });
   });
 
   const items = Array.from(document.querySelectorAll(".gallery a[data-full], .print-grid a[data-full]"));

@@ -658,17 +658,27 @@ html:not(.language-ready) .language-slider::after { transition: none; }
   text-decoration-thickness: 1px;
   text-underline-offset: 3px;
 }
-.award-feature:not(.award-feature--certificate) > a {
+.award-feature:not(.award-feature--certificate) > a,
+.award-feature:not(.award-feature--certificate) > .award-feature-photo {
+  display: block;
   overflow: hidden;
   background: #ddd9d1;
 }
-.award-feature:not(.award-feature--certificate) > a img {
+.award-feature:not(.award-feature--certificate) > a img,
+.award-feature:not(.award-feature--certificate) > .award-feature-photo img {
   height: clamp(220px, 28vw, 360px);
   object-fit: cover;
   transition: transform .55s cubic-bezier(.2,.7,.2,1);
 }
-.award-feature:not(.award-feature--certificate) > a:hover img {
+.award-feature:not(.award-feature--certificate) > a:hover img,
+.award-feature:not(.award-feature--certificate) > .award-feature-photo:hover img {
   transform: scale(1.025);
+}
+.protected-photo-frame { cursor: default; }
+.protected-photo {
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
 }
 
 .filmmic-feature {

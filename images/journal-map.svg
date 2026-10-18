@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" role="img" aria-label="A restrained grayscale map illustration of Europe">
+  <defs>
+    <pattern id="grain" width="7" height="7" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r=".55" fill="#4d5557" opacity=".10"/>
+    </pattern>
+    <linearGradient id="water" x2="0" y2="1">
+      <stop stop-color="#d4d9d7"/><stop offset="1" stop-color="#cbd2cf"/>
+    </linearGradient>
+    <linearGradient id="land" x2="0" y2="1">
+      <stop stop-color="#efeee9"/><stop offset="1" stop-color="#e7e5df"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="700" fill="url(#water)"/>
+  <rect width="1200" height="700" fill="url(#grain)"/>
+  <g fill="url(#land)" stroke="#b6bbb7" stroke-width="2" stroke-linejoin="round">
+    <!-- Simplified continental coastline; Leaflet positions each city from its coordinates. -->
+    <path d="M0 0h1200v478c-34-2-48-27-83-26-37 0-50 24-86 22-35-2-49-27-83-25-34 2-50 27-85 23-33-3-42-29-77-27-35 2-46 27-80 23-34-4-44-30-78-28-35 2-52 25-84 19-34-6-38-33-72-34-36-1-46 25-78 19-32-6-38-34-73-35-35-1-49 22-81 16-31-6-36-34-70-34-36 0-50 27-82 20-31-7-40-32-73-31-35 1-53 24-86 16-31-7-39-33-72-31-32 2-43 22-70 22Z"/>
+    <!-- Italy and the Balkans are deliberately quiet, recognizable silhouettes. -->
+    <path d="M406 473c20 2 34 19 43 43 8 20 14 47 27 69 11 18 24 31 27 49 2 12-3 25-11 25-10 0-13-18-20-33-8-18-21-32-30-52-10-21-12-44-22-60-7-13-20-22-23-35-2-3 3-7 9-6Z"/>
+    <path d="M504 521c18-5 30 8 42 22 14 16 25 35 42 48 15 12 34 18 43 34 5 9 4 20-4 24-9 4-18-7-29-15-16-12-37-15-53-29-16-15-23-36-38-51-10-10-23-16-25-26-1-4 8-6 22-7Z"/>
+    <path d="M-18 338c21-18 42-19 58-7 17 13 19 35 8 50-12 17-37 21-54 10-15-9-21-33-12-53Z"/>
+    <path d="M139 319c12-10 27-8 34 2 7 11 3 27-7 34-11 8-27 5-33-6-6-10-3-23 6-30Z"/>
+  </g>
+  <g fill="none" stroke="#c4c8c4" stroke-width="1.5" opacity=".72">
+    <path d="M122 0c17 115 28 226 46 337s29 232 48 363"/>
+    <path d="M365 0c8 116 13 232 19 349s11 234 18 351"/>
+    <path d="M610 0c-2 116-3 233-5 350s-3 234-5 350"/>
+    <path d="M855 0c-12 116-22 232-33 349s-21 234-32 351"/>
+    <path d="M0 198c200 2 400-1 600-7s400-14 600-22"/>
+    <path d="M0 392c200 3 400 1 600-6s400-16 600-25"/>
+  </g>
+  <path d="M1060 520c-38-10-73-7-105-20-33-14-53-14-86-25-31-11-48-28-81-31-34-3-60-17-85-39" fill="none" stroke="#aeb9b6" stroke-width="5" stroke-linecap="round" opacity=".95"/>
+  <g fill="#858b88" font-family="Arial,sans-serif" font-size="15" letter-spacing="3" opacity=".78">
+    <text x="716" y="110">EUROPE</text>
+    <text x="865" y="448">THE DANUBE</text>
+    <text x="142" y="654">MEDITERRANEAN</text>
+  </g>
+</svg>
