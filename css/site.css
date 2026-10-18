@@ -2358,3 +2358,22 @@ html[data-theme="dark"] .portfolio-guide-message--assistant a { color: #e3bd96; 
 /* Keep the contact biography readable without a decorative panel. */
 .contact-lede { max-width: 470px; margin: 16px 0 26px; color: var(--ink); font: 400 clamp(16px, 1.5vw, 19px)/1.55 var(--font-display); }
 .contact-note { font-size: 13px; letter-spacing: 0; }
+
+/* Soft liquid-glass contact panel. */
+.contact-panel {
+  padding: clamp(22px, 3vw, 36px);
+  border: 1px solid rgba(255,255,255,.13);
+  border-radius: 22px;
+  background: rgba(118,121,126,.16);
+  -webkit-backdrop-filter: blur(22px) saturate(1.2);
+  backdrop-filter: blur(22px) saturate(1.2);
+  box-shadow: 0 18px 48px rgba(0,0,0,.12), inset 0 1px 0 rgba(255,255,255,.09);
+}
+html[data-theme="light"] .contact-panel {
+  border-color: rgba(35,35,35,.1);
+  background: rgba(220,220,220,.48);
+  box-shadow: 0 18px 48px rgba(0,0,0,.06), inset 0 1px 0 rgba(255,255,255,.7);
+}
+@media (max-width: 720px) {
+  .contact-panel { padding: 22px; border-radius: 18px; }
+}
