@@ -3,7 +3,7 @@
   --ink: #111;
   --muted: #77736d;
   --line: #dfddd8;
-  --gap: clamp(20px, 2vw, 30px);
+  --gap: clamp(26px, 2.5vw, 38px);
   --header: 72px;
   --ease-spring: cubic-bezier(.2, .8, .2, 1);
   --ease-smooth: cubic-bezier(.22, 1, .36, 1);
@@ -326,6 +326,68 @@ img {
   border-color: var(--collection-accent, #282a2e);
   background: var(--collection-accent, #282a2e);
   color: #f7f6f3;
+}
+
+@media (max-width: 720px) {
+  :root { --gap: clamp(26px, 7vw, 36px); }
+
+  .page.collection-page {
+    padding: 34px 20px calc(76px + env(safe-area-inset-bottom));
+  }
+
+  .collection-heading,
+  .collection-heading--compact {
+    max-width: 620px;
+    margin-bottom: 32px;
+  }
+
+  .collection-heading h1 {
+    font-size: clamp(46px, 13vw, 66px);
+    line-height: .98;
+  }
+
+  .collection-heading > p:not(.section-kicker) {
+    max-width: 34ch;
+    margin-top: 13px;
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .collection-switcher {
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    gap: 9px;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    margin: 22px -20px 0;
+    padding: 0 20px 7px;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .collection-switcher::-webkit-scrollbar { display: none; }
+
+  .collection-switcher a {
+    flex: 0 0 auto;
+    min-height: 42px;
+    display: inline-flex;
+    align-items: center;
+    padding: 0 15px;
+    scroll-snap-align: start;
+    white-space: nowrap;
+  }
+
+  .gallery {
+    width: min(100%, 620px);
+    column-count: 1;
+    column-gap: 0;
+  }
+
+  .gallery a {
+    margin-bottom: var(--gap);
+    border-radius: 8px;
+  }
 }
 
 .gallery a[data-award]::after {
@@ -1324,12 +1386,8 @@ img {
     transition: none;
   }
 
-  .gallery {
-    column-count: 2;
-  }
-
   .page {
-    padding: 28px 18px 64px;
+    padding: 30px 20px 72px;
   }
 
   .collection-heading {
@@ -1339,10 +1397,6 @@ img {
 
   .collection-heading > p:not(.section-kicker) {
     margin-left: 0;
-  }
-
-  .collection-switcher {
-    justify-content: flex-start;
   }
 
   .nav .drop-menu {
@@ -1448,13 +1502,12 @@ img {
 }
 
 @media (max-width: 420px) {
-  .gallery {
-    column-count: 1;
-  }
-
   .page {
     padding-inline: 16px;
   }
+
+  .page.collection-page { padding-inline: 18px; }
+  .collection-switcher { margin-inline: -18px; padding-inline: 18px; }
 
   .page-copy,
   .awards {
