@@ -446,6 +446,36 @@ html:not(.language-ready) .language-slider::after { transition: none; }
 }
 
 @media (max-width: 720px) {
+  body.home-page.nav-open .nav,
+  html[data-theme="dark"] body.nav-open .nav {
+    background: #202124 !important;
+    border-bottom-color: rgba(255, 255, 255, .12);
+    color: #f2f0ed;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+  body.home-page.nav-open .nav a,
+  body.home-page.nav-open .nav .drop > button,
+  html[data-theme="dark"] body.nav-open .nav a,
+  html[data-theme="dark"] body.nav-open .nav .drop > button { color: #f2f0ed; }
+  body.home-page.nav-open .nav .drop-menu,
+  html[data-theme="dark"] body.nav-open .nav .drop-menu {
+    border-color: rgba(255, 255, 255, .12);
+    background: #2b2c30;
+    box-shadow: none;
+  }
+  body.home-page.nav-open .nav .drop-menu a,
+  html[data-theme="dark"] body.nav-open .nav .drop-menu a { color: #f2f0ed; }
+  html[data-theme="light"] body.home-page.nav-open .nav {
+    background: #f7f6f3 !important;
+    border-bottom-color: var(--line);
+    color: #111;
+  }
+  html[data-theme="light"] body.home-page.nav-open .nav a,
+  html[data-theme="light"] body.home-page.nav-open .nav .drop > button { color: #111; }
+  html[data-theme="light"] body.home-page.nav-open .nav .drop-menu { background: #f0eeea; }
+  html[data-theme="light"] body.home-page.nav-open .nav .drop-menu a { color: #111; }
+
   .home-page .nav {
     background: rgba(36, 38, 43, .98);
     border-bottom-color: rgba(255, 255, 255, .1);
