@@ -1,4 +1,41 @@
 (function () {
+  // Render the galleries independently of the optional map library. If Leaflet
+  // or its CDN is unavailable, location photos must still appear normally.
+  const photos = window.portfolioPhotos || [];
+  document.querySelectorAll("[data-city-entry]").forEach(function (section) {
+    const city = section.dataset.cityEntry;
+    const gallery = section.querySelector(".journal-photos");
+    if (!gallery) return;
+    const cityPhotos = photos.filter(function (photo) { return photo.location === city; });
+    const heading = section.querySelector("h2");
+    if (heading) heading.tabIndex = -1;
+    cityPhotos.forEach(function (photo) {
+      const link = document.createElement("a");
+      const filename = photo.file.replace(/\.jpg$/i, "");
+      link.id = "journal-photo-" + filename.replace(/[^a-z0-9_-]/gi, "-");
+      link.href = photo.href || (photo.page + "#photo-" + filename);
+      link.setAttribute("aria-label", photo.place || ("Photograph from " + city));
+      const image = document.createElement("img");
+      image.src = "images/" + photo.file;
+      image.alt = photo.place ? ("" + photo.place) : ("Photograph from " + city);
+      image.loading = "lazy";
+      link.appendChild(image);
+      if (photo.place) {
+        const caption = document.createElement("span");
+        caption.className = "journal-photo-caption";
+        caption.textContent = photo.place;
+        link.appendChild(caption);
+      }
+      gallery.appendChild(link);
+    });
+    if (cityPhotos.length === 0) {
+      section.classList.add("journal-entry--empty");
+      const emptyMessage = document.createElement("p");
+      emptyMessage.textContent = "No photographs have been added for this location yet.";
+      gallery.appendChild(emptyMessage);
+    }
+  });
+
   const mapElement = document.getElementById("journal-map");
   if (!mapElement || !window.L) return;
 
@@ -130,40 +167,5 @@
     button.addEventListener("click", function () {
       showCityPhotos(button.dataset.cityFocus);
     });
-  });
-
-  const photos = window.portfolioPhotos || [];
-  document.querySelectorAll("[data-city-entry]").forEach(function (section) {
-    const city = section.dataset.cityEntry;
-    const gallery = section.querySelector(".journal-photos");
-    if (!gallery) return;
-    const cityPhotos = photos.filter(function (photo) { return photo.location === city; });
-    const heading = section.querySelector("h2");
-    if (heading) heading.tabIndex = -1;
-    cityPhotos.forEach(function (photo) {
-      const link = document.createElement("a");
-      const filename = photo.file.replace(/\.jpg$/i, "");
-      link.id = "journal-photo-" + filename.replace(/[^a-z0-9_-]/gi, "-");
-      link.href = photo.href || (photo.page + "#photo-" + filename);
-      link.setAttribute("aria-label", photo.place || ("Photograph from " + city));
-      const image = document.createElement("img");
-      image.src = "images/" + photo.file;
-      image.alt = photo.place ? ("" + photo.place) : ("Photograph from " + city);
-      image.loading = "lazy";
-      link.appendChild(image);
-      if (photo.place) {
-        const caption = document.createElement("span");
-        caption.className = "journal-photo-caption";
-        caption.textContent = photo.place;
-        link.appendChild(caption);
-      }
-      gallery.appendChild(link);
-    });
-    if (cityPhotos.length === 0) {
-      section.classList.add("journal-entry--empty");
-      const emptyMessage = document.createElement("p");
-      emptyMessage.textContent = "No photographs have been added for this location yet.";
-      gallery.appendChild(emptyMessage);
-    }
   });
 })();
