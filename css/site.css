@@ -445,6 +445,33 @@ html:not(.language-ready) .language-slider::after { transition: none; }
   }
 }
 
+@media (max-width: 720px) {
+  .home-page .nav {
+    background: rgba(36, 38, 43, .98);
+    border-bottom-color: rgba(255, 255, 255, .1);
+  }
+  .home-page .nav a,
+  .home-page .nav .drop > button,
+  html[data-theme="dark"] .nav a,
+  html[data-theme="dark"] .nav .drop > button { color: var(--ink); }
+  .home-page .nav .drop-menu,
+  html[data-theme="dark"] .nav .drop-menu {
+    border-color: rgba(255, 255, 255, .12);
+    background: rgba(38, 39, 41, .98);
+  }
+  .home-page .nav .drop-menu a,
+  html[data-theme="dark"] .nav .drop-menu a { color: var(--ink); }
+  html[data-theme="light"] .home-page .nav {
+    background: rgba(247, 246, 243, .98);
+    border-bottom-color: var(--line);
+  }
+  html[data-theme="light"] .home-page .nav .drop-menu {
+    border-color: rgba(20, 20, 20, .12);
+    background: rgba(250, 249, 247, .98);
+  }
+  html[data-theme="light"] .home-page .nav .drop-menu a { color: #171717; }
+}
+
 .gallery a[data-award]::after {
   content: attr(data-award);
   position: absolute;
