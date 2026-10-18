@@ -2329,3 +2329,28 @@ html[data-theme="dark"] .portfolio-guide-message--assistant a { color: #e3bd96; 
 .portfolio-guide-prompts button { border: 1px solid var(--line); border-radius: 999px; padding: 7px 10px; background: transparent; color: var(--ink); cursor: pointer; font: 11px/1.2 var(--font-body); }
 .portfolio-guide-message--assistant a { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
 @media (max-width: 520px) { .portfolio-guide-launcher { right: 14px; bottom: 14px; } .portfolio-guide-panel { right: 14px; bottom: 72px; } }
+
+
+/* Contact and journal refinements: straightforward type and less supporting copy. */
+.contact-page { max-width: 1240px; grid-template-columns: minmax(0, .9fr) minmax(320px, 1.1fr); gap: clamp(28px, 5vw, 72px); }
+.contact-panel { max-width: 500px; }
+.contact-panel .section-kicker { display: none; }
+.contact-panel h1 { font: 600 clamp(36px, 4vw, 52px)/1.1 var(--font-sans); letter-spacing: -.04em; }
+.contact-lede { margin: 12px 0 24px; color: var(--muted); font-size: 16px; line-height: 1.55; }
+.contact-event-invite { margin: 0 0 22px; padding: 0 0 20px; border: 0; border-bottom: 1px solid var(--line); border-radius: 0; background: transparent; box-shadow: none; }
+.contact-event-invite .section-kicker { display: none; }
+.contact-event-invite h2 { font: 600 20px/1.3 var(--font-sans); letter-spacing: -.02em; }
+.contact-event-invite > p:not(.section-kicker) { margin: 7px 0 14px; max-width: 430px; font-size: 14px; line-height: 1.55; }
+.contact-event-action { padding: 10px 14px; border-radius: 6px; background: var(--ink); color: var(--bg); font-size: 13px; }
+.contact-event-action:hover { transform: translateY(-1px); background: var(--muted); }
+.contact-email, .contact-social { min-height: 58px; grid-template-columns: 78px minmax(0, 1fr) auto; gap: 12px; }
+.contact-label { letter-spacing: .07em; font-size: 11px; }
+.contact-note { margin-top: 18px; font-size: 13px; letter-spacing: 0; }
+.contact-portrait { border-radius: 8px; }
+.journal-entry > p { display: none; }
+.journal-entry--empty { padding-bottom: 20px; }
+@media (max-width: 720px) {
+  .contact-page { grid-template-columns: 1fr; gap: 28px; }
+  .contact-panel h1 { font-size: 38px; }
+  .contact-email, .contact-social { grid-template-columns: 72px minmax(0, 1fr) auto; }
+}

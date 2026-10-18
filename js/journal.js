@@ -30,9 +30,6 @@
     });
     if (cityPhotos.length === 0) {
       section.classList.add("journal-entry--empty");
-      const emptyMessage = document.createElement("p");
-      emptyMessage.textContent = "No photographs have been added for this location yet.";
-      gallery.appendChild(emptyMessage);
     }
   });
 
