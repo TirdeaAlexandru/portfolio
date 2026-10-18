@@ -404,13 +404,16 @@ window.portfolioPhotos = [
   {
     "file": "17-dsc_4915-pano-41-72.jpg",
     "pages": [
-      "events.html"
+      "work.html",
+      "prints.html",
+      "street.html",
+      "journal.html"
     ],
-    "tags": "architecture auditorium concert event events historic interior live music ornate performance theatre bucharest ateneul românesc",
-    "title": "",
+    "tags": "architecture auditorium bucharest historic interior ornate selected street theatre ateneul românesc",
+    "title": "Ateneul Românesc",
     "award": "",
-    "page": "events.html",
-    "href": "events.html#photo-17-dsc_4915-pano-41-72",
+    "page": "work.html",
+    "href": "work.html#photo-17-dsc_4915-pano-41-72",
     "location": "Bucharest",
     "place": "Ateneul Românesc, Bucharest"
   },

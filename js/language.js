@@ -40,7 +40,7 @@
     "A few to begin with": "Câteva imagini de început", "Selected for print": "Selectate pentru print",
     "Black & white · Street": "Alb-negru · Stradă", "Travel · Quiet moments": "Călătorii · Momente liniștite",
     "Travel · Colour": "Călătorii · Culoare", "Landscape · Evening": "Peisaj · Amurg", "Street · Colour": "Stradă · Culoare",
-    "Street · Long exposure": "Stradă · Expunere lungă", "Get $25 download ↗": "Descarcă la 25 $ ↗",
+    "Street · Long exposure": "Stradă · Expunere lungă", "Architecture · Bucharest": "Arhitectură · București", "Get $25 download ↗": "Descarcă la 25 $ ↗",
     "Interested in another image? Open it in the gallery and choose “Contact me” to include that photograph in your print enquiry.": "Te interesează altă fotografie? Deschide-o în galerie și alege „Contactează-mă” pentru a o include în cererea ta.",
     "Let’s make something memorable": "Hai să creăm ceva memorabil", "Get in touch.": "Să vorbim.",
     "For photography, film, prints, or a good idea that deserves a conversation.": "Pentru fotografie, film, printuri sau o idee bună despre care merită să vorbim.",
