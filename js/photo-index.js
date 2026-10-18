@@ -51,7 +51,8 @@ window.portfolioPhotos = [
   {
     "file": "37-_dsc0947.tif-45-25.jpg",
     "pages": [
-      "work.html"
+      "work.html",
+      "street.html"
     ],
     "tags": "and architecture black building city clock color dusk movement night photograph portfolio selected street traffic trails urban white",
     "title": "",
@@ -124,9 +125,10 @@ window.portfolioPhotos = [
   {
     "file": "20-dsc_5536-1-20-56.jpg",
     "pages": [
-      "work.html"
+      "work.html",
+      "street.html"
     ],
-    "tags": "and architecture black building color geometric monochrome people photograph portfolio selected silhouettes white",
+    "tags": "and architecture black building color geometric monochrome people photograph portfolio selected silhouettes white street",
     "title": "",
     "award": "",
     "page": "work.html",
@@ -157,7 +159,8 @@ window.portfolioPhotos = [
   {
     "file": "64-_dsc3981-73-52.jpg",
     "pages": [
-      "work.html"
+      "work.html",
+      "street.html"
     ],
     "tags": "and bird black color cyclist monochrome motion nature night photograph portfolio selected street swan water white wildlife",
     "title": "",
@@ -607,5 +610,69 @@ window.portfolioPhotos = [
     "award": "",
     "page": "journal.html",
     "href": "journal.html#photo-53-_dsc3330-62-41"
+  },
+  {
+    "file": "31-photo-album-1-00000001-34-69.jpg",
+    "pages": [
+      "street.html"
+    ],
+    "tags": "railway station platform train travel quiet bench bag urban street",
+    "title": "Between trains",
+    "award": "",
+    "page": "street.html",
+    "href": "street.html#photo-31-photo-album-1-00000001-34-69"
+  },
+  {
+    "file": "68-_dsc5327-2-27-63.jpg",
+    "pages": [
+      "street.html"
+    ],
+    "tags": "street city blue hour evening architecture urban lights color",
+    "title": "Blue hour",
+    "award": "",
+    "page": "street.html",
+    "href": "street.html#photo-68-_dsc5327-2-27-63"
+  },
+  {
+    "file": "73-_dsc3810-hdr.jpg",
+    "pages": [
+      "landscape.html",
+      "journal.html"
+    ],
+    "tags": "architecture bridge city landscape river water sky clouds Luxembourg",
+    "title": "Moselle bridge beneath a clouded sky",
+    "award": "",
+    "page": "landscape.html",
+    "href": "landscape.html#photo-73-_dsc3810-hdr",
+    "location": "Luxembourg",
+    "place": "Moselle bridge beneath a clouded sky, Luxembourg"
+  },
+  {
+    "file": "74-_dsc3663-hdr.jpg",
+    "pages": [
+      "landscape.html",
+      "journal.html"
+    ],
+    "tags": "architecture bridge city landscape river reflection trees Luxembourg",
+    "title": "Riverside at dusk",
+    "award": "",
+    "page": "landscape.html",
+    "href": "landscape.html#photo-74-_dsc3663-hdr",
+    "location": "Luxembourg",
+    "place": "Riverside at dusk, Luxembourg"
+  },
+  {
+    "file": "75-_dsc3887-hdr-pano.jpg",
+    "pages": [
+      "landscape.html",
+      "journal.html"
+    ],
+    "tags": "park pond nature trees water landscape evening Luxembourg",
+    "title": "Park pond at blue hour",
+    "award": "",
+    "page": "landscape.html",
+    "href": "landscape.html#photo-75-_dsc3887-hdr-pano",
+    "location": "Luxembourg",
+    "place": "Park pond at blue hour, Luxembourg"
   }
 ];

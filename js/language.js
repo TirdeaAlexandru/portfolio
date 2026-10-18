@@ -1,7 +1,7 @@
 (function () {
   const translations = {
     "Photography": "Fotografie", "Selected": "Selecție", "Photo Journal": "Jurnal foto", "Street": "Stradă", "Landscape": "Peisaj",
-    "Events": "Evenimente", "People": "Oameni", "Nature & Wildlife": "Natură și faună sălbatică",
+    "Events": "Evenimente", "Portraits": "Portrete", "Nature & Wildlife": "Natură și faună sălbatică",
     "Still Life": "Natură statică", "Short Films": "Scurtmetraje", "Awards": "Premii", "Prints": "Printuri",
     "Contact": "Contact", "Selected work": "Lucrări selectate", "Photographs": "Fotografii",
     "A small collection of places, people, and passing moments. Browse by subject to find a slower, more focused view.": "O selecție de locuri, oameni și momente trecătoare. Explorează fotografiile pe categorii și privește lumea în ritmul ei.",
@@ -127,7 +127,7 @@
     "Watch A Good Life on YouTube — Boovie 2025 special prize": "Urmărește A Good Life pe YouTube — Premiul special Boovie 2025",
     "Selected Work — Alexandru Țîrdea": "Lucrări selectate — Alexandru Țîrdea",
     "Street — Alexandru Țîrdea": "Stradă — Alexandru Țîrdea", "Landscape — Alexandru Țîrdea": "Peisaj — Alexandru Țîrdea",
-    "Events — Alexandru Țîrdea": "Evenimente — Alexandru Țîrdea", "People — Alexandru Țîrdea": "Oameni — Alexandru Țîrdea",
+    "Events — Alexandru Țîrdea": "Evenimente — Alexandru Țîrdea", "Portraits — Alexandru Țîrdea": "Portrete — Alexandru Țîrdea",
     "Nature & Wildlife — Alexandru Țîrdea": "Natură și faună sălbatică — Alexandru Țîrdea",
     "Still Life — Alexandru Țîrdea": "Natură statică — Alexandru Țîrdea", "Short Films — Alexandru Țîrdea": "Scurtmetraje — Alexandru Țîrdea",
     "Awards — Alexandru Țîrdea": "Premii — Alexandru Țîrdea", "Prints — Alexandru Țîrdea": "Printuri — Alexandru Țîrdea",
