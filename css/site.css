@@ -2144,8 +2144,6 @@ html[data-theme="dark"] .portfolio-guide-message--assistant a { color: #e3bd96; 
 html[data-theme="dark"] .portfolio-guide-prompts button { border-color: #494a4d; background: #242528; color: #e9e6e1; }
 html[data-theme="dark"] .portfolio-guide-prompts button:hover,
 html[data-theme="dark"] .portfolio-guide-prompts button:focus-visible { border-color: #bda084; background: #303033; }
-html[data-theme="dark"] .portfolio-guide-form input { border-color: #494a4d; background: #1b1c1e; color: #f1efec; }
-html[data-theme="dark"] .portfolio-guide-form input::placeholder { color: #aaa7a2; }
 html[data-theme="dark"] .portfolio-guide-close { color: #f1efec; }
 
 /* The home page has its own charcoal look; light mode makes it match the rest. */
@@ -2329,8 +2327,5 @@ html[data-theme="dark"] .portfolio-guide-message--assistant { background: #2b2c3
 html[data-theme="dark"] .portfolio-guide-message--assistant a { color: #e3bd96; }
 .portfolio-guide-prompts { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 12px; }
 .portfolio-guide-prompts button { border: 1px solid var(--line); border-radius: 999px; padding: 7px 10px; background: transparent; color: var(--ink); cursor: pointer; font: 11px/1.2 var(--font-body); }
-.portfolio-guide-form { display: flex; gap: 8px; }
-.portfolio-guide-form input { min-width: 0; flex: 1; border: 1px solid var(--line); border-radius: 999px; padding: 10px 13px; background: transparent; color: var(--ink); font: inherit; }
-.portfolio-guide-form > button { width: 40px; border: 0; border-radius: 50%; background: var(--ink); color: var(--bg); cursor: pointer; font-size: 18px; }
 .portfolio-guide-message--assistant a { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
 @media (max-width: 520px) { .portfolio-guide-launcher { right: 14px; bottom: 14px; } .portfolio-guide-panel { right: 14px; bottom: 72px; } }

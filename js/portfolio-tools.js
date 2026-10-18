@@ -5,8 +5,6 @@
   const awards = document.querySelector('a[href="awards.html"]') ? "awards.html" : "awards.html";
   const prints = document.querySelector('a[href="prints.html"]') ? "prints.html" : "prints.html";
   const isRo = function () { return window.portfolioLanguage && window.portfolioLanguage() === "ro"; };
-  const chatEndpoint = window.PORTFOLIO_CHAT_ENDPOINT || "";
-  const chatHistory = [];
 
   const launcher = document.createElement("button");
   launcher.className = "portfolio-guide-launcher";
@@ -22,34 +20,28 @@
   panel.setAttribute("aria-modal", "false");
   panel.setAttribute("aria-labelledby", "portfolio-guide-title");
   panel.hidden = true;
-  panel.innerHTML = '<div class="portfolio-guide-head"><div><p class="section-kicker"></p><h2 id="portfolio-guide-title"></h2></div><button type="button" class="portfolio-guide-close" aria-label="Close">×</button></div><p class="portfolio-guide-welcome"></p><div class="portfolio-guide-messages" role="log" aria-live="polite"></div><div class="portfolio-guide-prompts"></div><form class="portfolio-guide-form"><label class="sr-only" for="portfolio-guide-input"></label><input id="portfolio-guide-input" autocomplete="off"><button type="submit" aria-label="Send">↗</button></form>';
+  panel.innerHTML = '<div class="portfolio-guide-head"><div><p class="section-kicker"></p><h2 id="portfolio-guide-title"></h2></div><button type="button" class="portfolio-guide-close" aria-label="Close">×</button></div><p class="portfolio-guide-welcome"></p><div class="portfolio-guide-messages" role="log" aria-live="polite"></div><div class="portfolio-guide-prompts"></div>';
   document.body.appendChild(panel);
-  const input = panel.querySelector("input");
   const messages = panel.querySelector(".portfolio-guide-messages");
 
   function render() {
     const ro = isRo();
-    launcher.querySelector(".portfolio-guide-launcher-label").textContent = ro ? "Întreabă" : "Ask me";
-    launcher.setAttribute("aria-label", ro ? "Întreabă despre portofoliu" : "Ask about the portfolio");
-    panel.querySelector(".section-kicker").textContent = ro ? "ASISTENT PORTOFOLIU" : "PORTFOLIO ASSISTANT";
-    panel.querySelector("h2").textContent = ro ? "Cu ce te pot ajuta?" : "Ask me about the portfolio";
+    launcher.querySelector(".portfolio-guide-launcher-label").textContent = "FAQ";
+    launcher.setAttribute("aria-label", ro ? "Întrebări frecvente" : "Frequently asked questions");
+    panel.querySelector(".section-kicker").textContent = ro ? "GHID PORTOFOLIU" : "PORTFOLIO GUIDE";
+    panel.querySelector("h2").textContent = ro ? "Întrebări frecvente" : "Frequently asked questions";
     panel.querySelector(".portfolio-guide-close").setAttribute("aria-label", ro ? "Închide" : "Close");
-    panel.querySelector(".portfolio-guide-welcome").textContent = chatEndpoint
-      ? (ro ? "Sunt asistentul AI al portofoliului. Întreabă-mă orice despre lucrări, filme, premii sau colaborări." : "I’m the portfolio’s AI assistant. Ask me anything about the work, films, awards, or working together.")
-      : (ro ? "Asistentul AI nu este conectat încă. Poți întreba despre lucrări, filme, premii, printuri sau colaborări." : "The AI assistant isn’t connected yet. You can ask about the work, films, awards, prints, or working together.");
-    panel.querySelector("label").textContent = ro ? "Scrie o întrebare" : "Ask a question";
-    input.placeholder = ro ? "Scrie întrebarea ta…" : "Type your question…";
+    panel.querySelector(".portfolio-guide-welcome").textContent = ro ? "Alege o întrebare pentru informații rapide despre servicii, printuri sau filme." : "Choose a question for quick information about services, prints, or films.";
     const prompts = ro ? ["Poți fotografia evenimentul meu?", "Care este prețul unui fișier digital?", "Ce filme ai realizat?"] : ["Can you photograph my event?", "How much is a digital file?", "What films have you made?"];
     panel.querySelector(".portfolio-guide-prompts").innerHTML = prompts.map(function (p) { return '<button type="button">' + p + '</button>'; }).join("");
     panel.querySelectorAll(".portfolio-guide-prompts button").forEach(function (b) {
-      b.onclick = function () { input.value = b.textContent; respond(b.textContent); };
+      b.onclick = function () { respond(b.textContent); };
     });
   }
 
-  async function respond(raw) {
+  function respond(raw) {
     const question = raw.trim();
     if (!question) return;
-    input.value = "";
     const userMessage = document.createElement("p");
     userMessage.className = "portfolio-guide-message portfolio-guide-message--user";
     userMessage.textContent = question;
@@ -57,29 +49,6 @@
     assistantMessage.className = "portfolio-guide-message portfolio-guide-message--assistant";
     messages.append(userMessage, assistantMessage);
     messages.scrollTop = messages.scrollHeight;
-    if (chatEndpoint) {
-      chatHistory.push({ role: "user", content: question });
-      assistantMessage.textContent = isRo() ? "Mă gândesc…" : "Thinking…";
-      const submit = panel.querySelector(".portfolio-guide-form > button");
-      submit.disabled = true;
-      try {
-        const response = await fetch(chatEndpoint, {
-          method: "POST",
-          headers: { "content-type": "application/json" },
-          body: JSON.stringify({ messages: chatHistory.slice(-8) })
-        });
-        const data = await response.json();
-        if (!response.ok || !data.answer) throw new Error(data.error || "Assistant unavailable");
-        assistantMessage.textContent = data.answer;
-        chatHistory.push({ role: "assistant", content: data.answer });
-      } catch (_) {
-        assistantMessage.textContent = isRo() ? "Asistentul este momentan indisponibil. Încearcă din nou sau scrie-mi prin pagina de contact." : "The assistant is unavailable right now. Please try again or message me through the contact page.";
-      } finally {
-        submit.disabled = false;
-        messages.scrollTop = messages.scrollHeight;
-      }
-      return;
-    }
     const q = raw.toLowerCase();
     const ro = isRo();
     let html = "";
@@ -104,16 +73,12 @@
     const open = panel.hidden;
     panel.hidden = !open;
     launcher.setAttribute("aria-expanded", String(open));
-    if (open) input.focus();
+    if (open) panel.querySelector(".portfolio-guide-prompts button")?.focus();
   });
   panel.querySelector(".portfolio-guide-close").addEventListener("click", function () {
     panel.hidden = true;
     launcher.setAttribute("aria-expanded", "false");
     launcher.focus();
-  });
-  panel.querySelector("form").addEventListener("submit", function (event) {
-    event.preventDefault();
-    respond(input.value.trim());
   });
   document.addEventListener("keydown", function (event) {
     if (event.key === "Escape" && !panel.hidden) {
