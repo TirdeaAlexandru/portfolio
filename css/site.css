@@ -944,7 +944,8 @@ html:not(.language-ready) .language-slider::after { transition: none; }
 
 .contact-email,
 .contact-social {
-  display: flex;
+  display: grid;
+  grid-template-columns: 76px minmax(0, 1fr) auto;
   align-items: center;
   gap: 16px;
   min-height: 76px;
@@ -976,7 +977,7 @@ html:not(.language-ready) .language-slider::after { transition: none; }
 .contact-social .social-icon svg { width: 17px; height: 17px; }
 .contact-social > span:nth-child(2) { display: grid; gap: 3px; }
 .contact-social small { color: var(--muted); font-size: 10px; letter-spacing: .12em; text-transform: uppercase; }
-.contact-social strong { font-size: 15px; font-weight: 400; }
+.contact-social-handle { font-size: 15px; font-weight: 400; }
 
 .contact-note {
   margin: 24px 0 0;
@@ -1084,28 +1085,12 @@ html:not(.language-ready) .language-slider::after { transition: none; }
 .intro h1 {
   margin: 0;
   font-family: var(--font-display);
-  font-size: clamp(42px, 5.1vw, 76px);
+  font-size: clamp(38px, 4.5vw, 64px);
   font-weight: 500;
-  line-height: .98;
+  line-height: 1.04;
   letter-spacing: -.025em;
   text-wrap: balance;
   animation: intro-rise 800ms 60ms var(--ease-smooth) both;
-}
-
-.intro h1 em {
-  display: block;
-  color: #d2d0ce;
-  font-weight: 500;
-}
-
-.intro-first {
-  display: block;
-  white-space: nowrap;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: clamp(29px, 3.25vw, 43px);
-  font-weight: 400;
-  letter-spacing: -.055em;
-  line-height: 1.12;
 }
 
 .intro-role {
@@ -1695,13 +1680,7 @@ html.portfolio-visited .film-card {
     padding: 12px 0 0;
   }
 
-  .intro h1 {
-    font-size: clamp(42px, 10vw, 64px);
-  }
-
-  .intro-first {
-    font-size: clamp(32px, 9vw, 48px);
-  }
+  .intro h1 { font-size: clamp(36px, 8vw, 52px); }
 
   .intro-bio {
     max-width: 520px;
