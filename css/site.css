@@ -384,14 +384,15 @@ img {
 }
 
 .awards {
-  max-width: 720px;
+  width: min(100%, 1120px);
+  max-width: 1120px;
   margin: 48px auto 80px;
   padding: 0 24px;
 }
 
 .award-highlights {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   align-items: start;
   gap: clamp(18px, 3vw, 34px);
   max-width: 1120px;
@@ -422,6 +423,27 @@ img {
 .award-feature figcaption strong {
   color: var(--ink); font-family: "Cormorant Garamond", Georgia, serif;
   font-size: 23px; font-style: italic; font-weight: 500; letter-spacing: 0;
+}
+.award-feature figcaption a {
+  width: fit-content;
+  margin-top: 4px;
+  color: var(--ink);
+  font-size: 10px;
+  letter-spacing: .04em;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+.award-feature:not(.award-feature--certificate) > a {
+  overflow: hidden;
+  background: #ddd9d1;
+}
+.award-feature:not(.award-feature--certificate) > a img {
+  height: clamp(220px, 28vw, 360px);
+  object-fit: cover;
+  transition: transform .55s cubic-bezier(.2,.7,.2,1);
+}
+.award-feature:not(.award-feature--certificate) > a:hover img {
+  transform: scale(1.025);
 }
 
 .awards h2 {
@@ -1078,6 +1100,9 @@ img {
 @media (max-width: 980px) {
   .gallery {
     column-count: 2;
+  }
+  .award-highlights {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
