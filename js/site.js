@@ -52,6 +52,13 @@
   const items = Array.from(document.querySelectorAll(".gallery a[data-full]"));
   document.querySelectorAll(".gallery img").forEach(function (image) {
     image.decoding = "async";
+    image.draggable = false;
+    image.addEventListener("contextmenu", function (event) {
+      event.preventDefault();
+    });
+    image.addEventListener("dragstart", function (event) {
+      event.preventDefault();
+    });
 
     function applyPaletteTone() {
       const tile = image.closest("a");
@@ -123,13 +130,15 @@
   box.innerHTML =
     '<button class="close" type="button" aria-label="Close">×</button>' +
     '<button class="prev" type="button" aria-label="Previous">‹</button>' +
-    '<img alt="">' +
-    '<button class="next" type="button" aria-label="Next">›</button>';
+    '<img alt="" draggable="false">' +
+    '<button class="next" type="button" aria-label="Next">›</button>' +
+    '<a class="print-contact" href="mailto:tirdea.alex2020@gmail.com">Want a print or full-resolution file? Contact me</a>';
   document.body.appendChild(box);
 
   const img = box.querySelector("img");
+  const printContact = box.querySelector(".print-contact");
   const closeButton = box.querySelector(".close");
-  const focusable = Array.from(box.querySelectorAll("button"));
+  const focusable = Array.from(box.querySelectorAll("button, a[href]"));
   let index = 0;
   let returnFocus = null;
   let touchStartX = 0;
@@ -138,6 +147,11 @@
     index = (i + items.length) % items.length;
     img.src = items[index].getAttribute("data-full");
     img.alt = items[index].querySelector("img").alt || "";
+    const fileName = img.src.split("/").pop().replace(/\.[^.]+$/, "");
+    const photoName = items[index].querySelector("img").alt || fileName;
+    printContact.href = "mailto:tirdea.alex2020@gmail.com?subject=" +
+      encodeURIComponent("Photo print or full-resolution inquiry") +
+      "&body=" + encodeURIComponent("Hello, I’m interested in a print or full-resolution file of “" + photoName + "”.");
     box.classList.add("is-open");
     document.body.style.overflow = "hidden";
     if (moveFocus) closeButton.focus();
@@ -151,6 +165,12 @@
   }
 
   items.forEach(function (el, i) {
+    el.addEventListener("contextmenu", function (event) {
+      event.preventDefault();
+    });
+    el.addEventListener("dragstart", function (event) {
+      event.preventDefault();
+    });
     el.addEventListener("click", function (e) {
       e.preventDefault();
       returnFocus = el;
