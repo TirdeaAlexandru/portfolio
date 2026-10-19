@@ -2332,3 +2332,6 @@ html[data-theme="light"] .contact-panel {
 @media (max-width: 720px) {
   .contact-panel { padding: 22px; border-radius: 18px; }
 }
+
+/* Give city names a little breathing room above their photo grids. */
+.journal-entry h2 { position: relative; top: -4px; margin-bottom: 6px; }
