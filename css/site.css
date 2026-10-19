@@ -2335,3 +2335,10 @@ html[data-theme="light"] .contact-panel {
 
 /* Give city names a little breathing room above their photo grids. */
 .journal-entry h2 { position: relative; top: -4px; margin-bottom: 6px; }
+
+
+/* A quieter, upright serif for the Prints page. */
+.prints-page .prints-intro h1,
+.prints-page .prints-section-heading h2,
+.prints-page .print-card-caption h3 { font-family: "Lora", Georgia, serif; font-style: normal; }
+.prints-page .prints-intro h1 em { font-style: normal; font-weight: 400; }
