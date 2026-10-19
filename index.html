@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500;1,600&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/site.css?v=journal-mobile-map-20261018">
+  <link rel="stylesheet" href="css/site.css?v=collection-mobile-tip-20261019">
 </head>
 <body class="home-page">
   <header class="header">
@@ -34,10 +34,15 @@
       <a href="awards.html">Awards</a>
       <a href="prints.html">Prints</a>
       <a href="contact.html">Contact</a>
-          <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark mode" aria-pressed="false" title="Switch to dark mode"><span class="theme-toggle-icon" aria-hidden="true">☾</span><span class="sr-only">Theme</span></button>
-          <div class="language-switch" role="group" aria-label="Alege limba"><span class="language-label" data-language-label="ro">RO</span><button type="button" class="language-slider" data-language-toggle aria-label="Schimbă în engleză" aria-pressed="false"><span class="sr-only">Schimbă limba</span></button><span class="language-label" data-language-label="en">EN</span></div>
 </nav>
+    <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark mode" aria-pressed="false" title="Switch to dark mode"><span class="theme-toggle-icon" aria-hidden="true">☾</span><span class="sr-only">Theme</span></button>
+    <div class="language-switch" role="group" aria-label="Alege limba"><span class="language-label" data-language-label="ro">RO</span><button type="button" class="language-slider" data-language-toggle aria-label="Schimbă în engleză" aria-pressed="false"><span class="sr-only">Schimbă limba</span></button><span class="language-label" data-language-label="en">EN</span></div>
   </header>
+  <aside class="language-tip" data-language-tip role="status">
+    <span class="language-tip-arrow" aria-hidden="true">↗</span>
+    <span>Did you know you can switch the website to English here?</span>
+    <button class="language-tip-close" type="button" aria-label="Dismiss">×</button>
+  </aside>
 
   <main class="intro">
     <section class="intro-copy" aria-labelledby="intro-title">
@@ -73,9 +78,19 @@
   </main>
 
   <script src="js/site.js?v=journal-mobile-map-20261018"></script>
-  <script src="js/language.js?v=translations-map-direct-20261018"></script>
+  <script src="js/language.js?v=language-tip-collection-faq-20261019"></script>
   <script src="js/theme.js?v=theme-transition-20261018"></script>
   <script src="js/chat-config.js?v=portfolio-ai-20261018"></script>
-  <script src="js/portfolio-tools.js?v=faq-quick-20261018"></script>
+  <script src="js/portfolio-tools.js?v=faq-digital-price-fix-20261019"></script>
+  <script>
+    (function () {
+      const tip = document.querySelector("[data-language-tip]");
+      if (!tip) return;
+      const hide = function () { tip.hidden = true; };
+      tip.querySelector(".language-tip-close").addEventListener("click", hide);
+      document.querySelectorAll("[data-language-toggle]").forEach(function (toggle) { toggle.addEventListener("click", hide, { once: true }); });
+      window.setTimeout(hide, 12000);
+    }());
+  </script>
 </body>
 </html>

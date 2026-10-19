@@ -58,7 +58,7 @@
       html = ro ? 'Vezi <a href="' + films + '">filmele și showreel-ul</a>.' : 'Explore the <a href="' + films + '">short films and featured showreel</a>.';
     } else if (/award|prize|winner|premi|distinc/.test(q)) {
       html = ro ? 'Premiile și selecțiile sunt pe <a href="' + awards + '">pagina de premii</a>.' : 'Awards and selections are listed on the <a href="' + awards + '">awards page</a>.';
-    } else if (/print|price|cost|\$|25|buy|download|preț|cumpar/.test(q)) {
+    } else if (/print|price|cost|\$|25|buy|download|digital|file|how much|preț|pret|fișier|fisier|cât costă|cat costa/.test(q)) {
       html = ro ? 'Fișierul digital la rezoluție maximă costă 25 USD per fotografie. <a href="' + prints + '">Vezi printurile</a> sau <a href="' + mail + '">scrie un e-mail</a> pentru detalii.' : 'A full-resolution digital file is $25 per photograph. <a href="' + prints + '">Browse prints</a> or <a href="' + mail + '">email for details</a>.';
     } else if (/portrait|people|street|landscape|nature|wildlife|still.?life|portret|strad|peisaj|natur/.test(q)) {
       html = ro ? 'Explorează fotografiile după temă în <a href="work.html">selecția principală</a> și în meniul Fotografie.' : 'Browse photographs in <a href="work.html">Selected</a>, then use the Photography menu to explore each collection.';

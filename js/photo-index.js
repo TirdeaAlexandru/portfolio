@@ -183,13 +183,13 @@ window.portfolioPhotos = [
     "file": "15-dsc_4799-35-19.jpg",
     "pages": [
       "work.html",
-      "landscape.html"
+      "street.html"
     ],
-    "tags": "and black boat calm color horizon landscape minimal monochrome nature outdoors photograph portfolio sea selected sky water white bucharest",
+    "tags": "and black boat calm color horizon street minimal monochrome nature outdoors photograph portfolio sea selected sky water white bucharest",
     "title": "",
     "award": "",
-    "page": "landscape.html",
-    "href": "landscape.html#photo-15-dsc_4799-35-19",
+    "page": "street.html",
+    "href": "street.html#photo-15-dsc_4799-35-19",
     "location": "Bucharest"
   },
   {
@@ -492,13 +492,13 @@ window.portfolioPhotos = [
   {
     "file": "21-dsc_5696-14-14.jpg",
     "pages": [
-      "nature.html"
+      "street.html"
     ],
-    "tags": "animal bird black flying monochrome nature plant sky streetlight white wildlife galati",
+    "tags": "animal bird black flying monochrome street plant sky streetlight white wildlife galati",
     "title": "",
     "award": "",
-    "page": "nature.html",
-    "href": "nature.html#photo-21-dsc_5696-14-14",
+    "page": "street.html",
+    "href": "street.html#photo-21-dsc_5696-14-14",
     "location": "Galați"
   },
   {
@@ -539,13 +539,13 @@ window.portfolioPhotos = [
   {
     "file": "38-_dsc1864-46-26.jpg",
     "pages": [
-      "nature.html"
+      "street.html"
     ],
-    "tags": "animal bird black cat nature pet plant portrait wildlife galati",
+    "tags": "animal bird black cat street pet plant portrait wildlife galati",
     "title": "",
     "award": "",
-    "page": "nature.html",
-    "href": "nature.html#photo-38-_dsc1864-46-26",
+    "page": "street.html",
+    "href": "street.html#photo-38-_dsc1864-46-26",
     "location": "Galați"
   },
   {
