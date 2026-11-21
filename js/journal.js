@@ -2,6 +2,22 @@
   // Render country galleries independently of the optional map library. If Leaflet
   // or its CDN is unavailable, journal photos must still appear normally.
   const photos = window.portfolioPhotos || [];
+  const countryNamesRo = { France: "Franța", Italy: "Italia", Luxembourg: "Luxemburg", Romania: "România" };
+  const placeNames = {
+    "Dunărea, Galați": { en: "The Danube, Galați", ro: "Dunărea, Galați" },
+    "Delta Dunării": { en: "Danube Delta", ro: "Delta Dunării" },
+    "Park pond at blue hour, Luxembourg": { en: "Park pond at blue hour, Luxembourg", ro: "Iazul din parc la ora albastră, Luxemburg" },
+    "Street lamps beneath the moon, Nancy": { en: "Street lamps beneath the moon, Nancy", ro: "Felinar sub clar de lună, Nancy" }
+  };
+  const renderedPhotos = [];
+  function photoDescription(photo, country) {
+    const language = window.portfolioLanguage ? window.portfolioLanguage() : "ro";
+    const translatedPlace = photo.place && placeNames[photo.place];
+    if (translatedPlace) return translatedPlace[language] || translatedPlace.en;
+    return photo.place || (language === "ro"
+      ? "Fotografie din " + (countryNamesRo[country] || country)
+      : "Photograph from " + country);
+  }
   document.querySelectorAll("[data-country-entry]").forEach(function (section) {
     const country = section.dataset.countryEntry;
     const gallery = section.querySelector(".journal-photos");
@@ -14,17 +30,25 @@
       const filename = photo.file.replace(/\.jpg$/i, "");
       link.id = "journal-photo-" + filename.replace(/[^a-z0-9_-]/gi, "-");
       link.href = photo.href || (photo.page + "#photo-" + filename);
-      link.setAttribute("aria-label", photo.place || ("Photograph from " + country));
+      link.setAttribute("aria-label", photoDescription(photo, country));
       const image = document.createElement("img");
       image.src = "images/" + photo.file + "?v=web-optimized-20261121";
-      image.alt = photo.place ? ("" + photo.place) : ("Photograph from " + country);
+      image.alt = photoDescription(photo, country);
       image.loading = "lazy";
       link.appendChild(image);
       gallery.appendChild(link);
+      renderedPhotos.push({ photo: photo, country: country, link: link, image: image });
     });
     if (countryPhotos.length === 0) {
       section.classList.add("journal-entry--empty");
     }
+  });
+  window.addEventListener("portfolio-language-change", function () {
+    renderedPhotos.forEach(function (item) {
+      const description = photoDescription(item.photo, item.country);
+      item.image.alt = description;
+      item.link.setAttribute("aria-label", description);
+    });
   });
 
   const mapElement = document.getElementById("journal-map");
