@@ -57,7 +57,6 @@
     "FILMMIC 17TH EDITION · PHOTOGRAPHY": "FILMMIC · EDIȚIA A XVII-A · FOTOGRAFIE",
     "“Loneliness” · 1st Prize": "„Singurătate” · Premiul I", "“In Search of Happiness” · 3rd Prize": "„In Search of Happiness” · Premiul III",
     "Photography / Countries": "Fotografie / Țări", "Photo journal": "Jurnal foto",
-    "Photo Journal — Alexandru Țîrdea": "Jurnal foto — Alexandru Țîrdea",
     "Photographs from countries represented in the journal.": "Fotografii din țările reprezentate în jurnal.",
     "A photo journal of places photographed by Alexandru Țîrdea.": "Jurnal foto cu locuri surprinse de Alexandru Țîrdea.",
     "Countries in the photo journal": "Țările din jurnalul foto",
@@ -131,6 +130,7 @@
 
   const attributes = {
     "Interactive map of the countries in the photo journal": "Hartă interactivă a țărilor din jurnalul foto",
+    "Photo Journal — Alexandru Țîrdea": "Jurnal foto — Alexandru Țîrdea",
     "Watch Lady Tan’s Circle of Women on YouTube — Boovie 2026 first prize": "Urmărește Doamna Tan și cercul binelui pe YouTube — Premiul I Boovie 2026",
     "Watch A Good Life on YouTube — Boovie 2025 special prize": "Urmărește A Good Life pe YouTube — Premiul special Boovie 2025",
     "Selected Work — Alexandru Țîrdea": "Lucrări selectate — Alexandru Țîrdea",
