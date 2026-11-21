@@ -289,30 +289,6 @@ window.portfolioPhotos = [
     "location": "Venice"
   },
   {
-    "file": "40-_dsc2238-48-28.jpg",
-    "pages": [
-      "landscape.html"
-    ],
-    "tags": "forest greenery landscape nature outdoors park path river sky trees water luxembourg",
-    "title": "",
-    "award": "",
-    "page": "landscape.html",
-    "href": "landscape.html#photo-40-_dsc2238-48-28",
-    "location": "Luxembourg"
-  },
-  {
-    "file": "52-_dsc3253-61-40.jpg",
-    "pages": [
-      "landscape.html"
-    ],
-    "tags": "black landscape monochrome nature outdoors park path people quiet sky trees walking water white nancy",
-    "title": "",
-    "award": "",
-    "page": "landscape.html",
-    "href": "landscape.html#photo-52-_dsc3253-61-40",
-    "location": "Nancy"
-  },
-  {
     "file": "60-_dsc3677-hdr-69-48.jpg",
     "pages": [
       "landscape.html"
@@ -476,7 +452,8 @@ window.portfolioPhotos = [
   {
     "file": "21-dsc_5696-14-14.jpg",
     "pages": [
-      "street.html"
+      "street.html",
+      "nature.html"
     ],
     "tags": "animal bird black flying monochrome street plant sky streetlight white wildlife galati",
     "title": "",
@@ -623,14 +600,13 @@ window.portfolioPhotos = [
   {
     "file": "73-_dsc3810-hdr.jpg",
     "pages": [
-      "landscape.html",
       "journal.html"
     ],
     "tags": "architecture bridge city landscape river water sky clouds Luxembourg",
     "title": "Moselle bridge beneath a clouded sky",
     "award": "",
-    "page": "landscape.html",
-    "href": "landscape.html#photo-73-_dsc3810-hdr",
+    "page": "journal.html",
+    "href": "journal.html#journal-photo-73-_dsc3810-hdr",
     "location": "Luxembourg",
     "place": "Moselle bridge beneath a clouded sky, Luxembourg"
   },
@@ -666,14 +642,13 @@ window.portfolioPhotos = [
     "file": "63-_dsc3949-hdr-72-51.jpg",
     "pages": [
       "street.html",
-      "landscape.html",
       "journal.html"
     ],
     "tags": "Luxembourg streetlight lamp moon blue hour dusk city architecture night landscape trees urban",
     "title": "Street lamps beneath the moon",
     "award": "",
-    "page": "landscape.html",
-    "href": "landscape.html#photo-63-_dsc3949-hdr-72-51",
+    "page": "street.html",
+    "href": "street.html#photo-63-_dsc3949-hdr-72-51",
     "location": "Luxembourg",
     "place": "Street lamps beneath the moon, Luxembourg"
   },
