@@ -2541,6 +2541,7 @@ html[data-theme="light"] .contact-panel {
   object-position: center;
 }
 .award-highlights--top20 { display: block; width: min(100%, 680px); max-width: 680px; margin: 16px 0 30px; }
+.certificate-group .award-highlights--top20 { margin-left: 0; margin-right: 0; }
 .award-certificate--top20 { max-width: 680px; }
 .top20-photo-preview { width: 100%; height: auto; aspect-ratio: 3 / 2; background: transparent; }
 .top20-photo-preview img { object-fit: cover; object-position: center; }
