@@ -2457,15 +2457,25 @@ html[data-theme="light"] .contact-panel {
   .language-switch[data-current="en"] .language-slider::after { transform: translateX(7px); }
 }
 
-/* Keep Street photographs uncropped in horizontal, row-by-row order. */
+/* Pack Street photographs tightly in horizontal rows without cropping. */
 .collection-page--street > .street-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+  column-count: initial;
+}
+.collection-page--street .street-photo-group {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-auto-rows: auto;
   align-items: start;
-  column-count: initial;
   gap: var(--gap);
 }
-.collection-page--street > .street-gallery a {
+.collection-page--street .street-photo-group.is-masonry {
+  grid-auto-rows: 1px;
+  grid-auto-flow: dense;
+}
+.collection-page--street .street-photo-group a {
   min-width: 0;
   margin: 0;
 }
@@ -2519,17 +2529,27 @@ html[data-theme="light"] .contact-panel {
 .collection-page--nature > .nature-gallery .nature-color-group:last-child a:last-child { grid-column: 4 / span 2; }
 .nature-color-group a { min-width: 0; margin: 0; }
 
-/* Align the Top 20 and Anatole Magrin award cards with the feature entries. */
+/* Give every award photograph a shared 3:2 frame, with no letterboxing. */
+.award-feature:not(.award-feature--certificate) > a,
+.award-feature:not(.award-feature--certificate) > .award-feature-photo {
+  aspect-ratio: 3 / 2;
+}
+.award-feature:not(.award-feature--certificate) > a img,
+.award-feature:not(.award-feature--certificate) > .award-feature-photo img {
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
 .award-highlights--top20 { display: block; width: min(100%, 680px); max-width: 680px; margin: 16px 0 30px; }
 .award-certificate--top20 { max-width: 680px; }
-.top20-photo-preview { height: clamp(220px, 34vw, 360px); aspect-ratio: 3 / 2; background: #292827; }
-.top20-photo-preview img { object-fit: cover; }
-.anatole-award-feature img { object-fit: cover !important; background: #292827; }
+.top20-photo-preview { width: 100%; height: auto; aspect-ratio: 3 / 2; background: transparent; }
+.top20-photo-preview img { object-fit: cover; object-position: center; }
+.anatole-award-feature img { object-fit: cover !important; object-position: center; }
 .award-film-grid--2026 { margin-top: 18px; }
 .anatole-award-feature { margin-top: 22px; }
 
 @media (max-width: 980px) {
-  .collection-page--street > .street-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .collection-page--street .street-photo-group { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .collection-page--landscape > .landscape-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .collection-page--nature > .nature-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .collection-page--nature > .nature-gallery .nature-color-group { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -2538,7 +2558,7 @@ html[data-theme="light"] .contact-panel {
   .collection-page--nature > .nature-gallery .nature-color-group:last-child a:last-child { grid-column: auto; }
 }
 @media (max-width: 720px) {
-  .collection-page--street > .street-gallery { grid-template-columns: 1fr; }
+  .collection-page--street .street-photo-group { grid-template-columns: 1fr; }
   .collection-page--landscape > .landscape-gallery { grid-template-columns: 1fr; }
   .collection-page--nature > .nature-gallery { grid-template-columns: 1fr; gap: 32px; }
   .collection-page--nature > .nature-gallery .nature-color-group,
