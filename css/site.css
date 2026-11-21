@@ -2413,3 +2413,21 @@ html[data-theme="light"] .contact-panel {
   background: linear-gradient(90deg, transparent, var(--collection-accent), transparent);
   content: "";
 }
+
+
+/* Arrange the Still Life photographs in deliberate left-to-right rows. */
+.collection-page--still-life > .gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: start;
+  column-count: initial;
+  column-gap: 0;
+  gap: var(--gap);
+}
+.collection-page--still-life > .gallery a { margin: 0; }
+@media (max-width: 980px) {
+  .collection-page--still-life > .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 720px) {
+  .collection-page--still-life > .gallery { grid-template-columns: 1fr; }
+}
