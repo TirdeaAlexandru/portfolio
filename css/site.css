@@ -2433,41 +2433,10 @@ html[data-theme="light"] .contact-panel {
   .collection-page--still-life > .gallery { grid-template-columns: 1fr; }
 }
 
-
-/* Keep the awards page focused on the two selected photography distinctions. */
-.awards-page { max-width: 980px; }
-.awards-page > p { margin-bottom: 26px; color: var(--muted); }
-.awards-list {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: clamp(18px, 3vw, 30px);
-}
-.awards-page .award-certificate {
-  padding: 0;
-  border: 0;
-  border-radius: 0;
-  background: transparent;
-  box-shadow: none;
-}
-.awards-page .certificate-preview {
-  height: clamp(220px, 28vw, 330px);
-  border-radius: 4px;
-  background: rgba(128, 128, 128, .12);
-}
-.awards-page .award-certificate--photo .certificate-preview { height: auto; aspect-ratio: 5261 / 2740; }
-.awards-page .award-certificate--photo .certificate-preview img { object-fit: cover; }
-.awards-page .award-certificate figcaption {
-  gap: 5px;
-  padding: 12px 0 0;
-  font-size: 13px;
-  letter-spacing: 0;
-}
-.awards-page .award-certificate figcaption strong {
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 500;
-}
-@media (max-width: 720px) {
-  .awards-list { grid-template-columns: 1fr; gap: 24px; }
-  .awards-page .certificate-preview { height: clamp(220px, 60vw, 320px); }
-}
+/* Keep award cards clear and restrained while preserving each award entry. */
+.awards .award-feature,
+.awards .award-certificate { box-shadow: none; border-radius: 5px; }
+.awards .award-feature { padding: 10px; }
+.awards .award-certificate { padding: 10px; }
+.anatole-award-thumb { display: block; flex: 0 0 112px; width: 112px; height: 63px; object-fit: cover; border-radius: 4px; }
+@media (max-width: 720px) { .anatole-award-thumb { flex-basis: 92px; width: 92px; height: 56px; } }
