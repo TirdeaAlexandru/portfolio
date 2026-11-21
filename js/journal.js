@@ -128,9 +128,9 @@
     requestAnimationFrame(waitForScrollEnd);
   }
   const mapPlaces = [
-    { label: "Galați · Danube Rock Revolution", labelRo: "Galați · Danube Rock Revolution", city: "Galați", coords: cities["Galați"] },
+    { label: "Galați", labelRo: "Galați", city: "Galați", coords: cities["Galați"] },
     { label: "Târgul Bujor, Galați", labelRo: "Târgul Bujor, Galați", city: "Galați", coords: [45.8667, 27.9167] },
-    { label: "Bucharest · Ateneul Românesc", labelRo: "București · Ateneul Românesc", city: "Bucharest", coords: [44.4354, 26.0979] },
+    { label: "Bucharest", labelRo: "București", city: "Bucharest", coords: cities["Bucharest"] },
     { label: "Venice", labelRo: "Veneția", city: "Venice", coords: cities.Venice },
     { label: "Metz", labelRo: "Metz", city: "Metz", coords: cities.Metz },
     { label: "Luxembourg", labelRo: "Luxemburg", city: "Luxembourg", coords: cities.Luxembourg },
