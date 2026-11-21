@@ -142,7 +142,6 @@
     "Selected photographs by Alexandru Țîrdea.": "Fotografii selectate de Alexandru Țîrdea.",
     "Meet Alexandru-Constantin Țîrdea, photographer and travel enthusiast. Explore his selected photographs.": "Descoperă portofoliul lui Alexandru-Constantin Țîrdea, fotograf pasionat de călătorii și fotografie.",
     "Portfolio of photography by Alexandru Țîrdea.": "Portofoliu fotografic de Alexandru Țîrdea."
-    "Birds & Water": "Păsări și apă", "Small Details": "Detalii din natură", "Landscapes & Seasons": "Peisaje și anotimpuri",
   };
 
   const languageToggles = Array.from(document.querySelectorAll("[data-language-toggle]"));
