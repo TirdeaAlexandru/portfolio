@@ -402,22 +402,6 @@ window.portfolioPhotos = [
     "place": "Danube Rock Revolution, Galați"
   },
   {
-    "file": "17-dsc_4915-pano-41-72.jpg",
-    "pages": [
-      "work.html",
-      "prints.html",
-      "street.html",
-      "journal.html"
-    ],
-    "tags": "architecture auditorium bucharest historic interior ornate selected street theatre ateneul românesc",
-    "title": "Ateneul Românesc",
-    "award": "",
-    "page": "work.html",
-    "href": "work.html#photo-17-dsc_4915-pano-41-72",
-    "location": "Bucharest",
-    "place": "Ateneul Românesc, Bucharest"
-  },
-  {
     "file": "16-dsc_4854-edit_1-40-22.jpg",
     "pages": [
       "people.html"
