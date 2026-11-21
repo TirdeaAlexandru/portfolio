@@ -5,8 +5,9 @@
   --line: #dfddd8;
   --gap: clamp(26px, 2.5vw, 38px);
   --header: 72px;
-  --font-display: "FreightDisp Pro", "Freight Display Pro", "Cormorant Garamond", Georgia, serif;
-  --font-sans: "Acumin Pro", "Source Sans 3", "Outfit", system-ui, sans-serif;
+  --font-display: "Lora", Georgia, serif;
+  --font-sans: "Lora", Georgia, serif;
+  --font-body: "Lora", Georgia, serif;
   --ease-spring: cubic-bezier(.2, .8, .2, 1);
   --ease-smooth: cubic-bezier(.22, 1, .36, 1);
 }
