@@ -2385,3 +2385,20 @@ html[data-theme="light"] .contact-panel {
 @media (prefers-reduced-motion: reduce) {
   .language-tip, .language-tip-arrow { animation: none; }
 }
+
+/* Distinguish the two portrait groups with a quiet visual break. */
+.collection-page--people .portrait-group + .portrait-group {
+  position: relative;
+  margin-top: clamp(42px, 6vw, 80px);
+  padding-top: clamp(26px, 4vw, 44px);
+}
+.collection-page--people .portrait-group + .portrait-group::before {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: clamp(72px, 12vw, 120px);
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--collection-accent), transparent);
+  content: "";
+  transform: translateX(-50%);
+}
