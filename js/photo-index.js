@@ -678,69 +678,113 @@ window.portfolioPhotos = [
     "place": "Street lamps beneath the moon, Luxembourg"
   },
   {
-      "file": "DSC_9410.jpg",
-      "pages": [
-        "events.html"
-      ],
-      "tags": "birthday celebration dance dancing events friends party people",
-      "title": "",
-      "award": "",
-      "page": "events.html",
-      "href": "events.html#photo-DSC_9410"
-    },
+    "file": "DSC_9410.jpg",
+    "pages": [
+      "events.html"
+    ],
+    "tags": "birthday celebration dance dancing events friends party people",
+    "title": "",
+    "award": "",
+    "page": "events.html",
+    "href": "events.html#photo-DSC_9410"
+  },
   {
-      "file": "DSC_9443.jpg",
-      "pages": [
-        "events.html"
-      ],
-      "tags": "birthday cake celebration events friends group party people",
-      "title": "",
-      "award": "",
-      "page": "events.html",
-      "href": "events.html#photo-DSC_9443"
-    },
+    "file": "DSC_9443.jpg",
+    "pages": [
+      "events.html"
+    ],
+    "tags": "birthday cake celebration events friends group party people",
+    "title": "",
+    "award": "",
+    "page": "events.html",
+    "href": "events.html#photo-DSC_9443"
+  },
   {
-      "file": "DSC_1772.jpg",
-      "pages": [
-        "events.html"
-      ],
-      "tags": "18 birthday cake celebration events party",
-      "title": "",
-      "award": "",
-      "page": "events.html",
-      "href": "events.html#photo-DSC_1772"
-    },
+    "file": "DSC_1772.jpg",
+    "pages": [
+      "events.html"
+    ],
+    "tags": "18 birthday cake celebration events party",
+    "title": "",
+    "award": "",
+    "page": "events.html",
+    "href": "events.html#photo-DSC_1772"
+  },
   {
-      "file": "DSC_1941.jpg",
-      "pages": [
-        "events.html"
-      ],
-      "tags": "birthday celebration friends events party people portrait",
-      "title": "",
-      "award": "",
-      "page": "events.html",
-      "href": "events.html#photo-DSC_1941"
-    },
+    "file": "DSC_1941.jpg",
+    "pages": [
+      "events.html"
+    ],
+    "tags": "birthday celebration friends events party people portrait",
+    "title": "",
+    "award": "",
+    "page": "events.html",
+    "href": "events.html#photo-DSC_1941"
+  },
   {
-      "file": "DSC_1875.jpg",
-      "pages": [
-        "events.html"
-      ],
-      "tags": "birthday celebration dance dancing events friends music party people",
-      "title": "",
-      "award": "",
-      "page": "events.html",
-      "href": "events.html#photo-DSC_1875"
-    },
+    "file": "DSC_1875.jpg",
+    "pages": [
+      "events.html"
+    ],
+    "tags": "birthday celebration dance dancing events friends music party people",
+    "title": "",
+    "award": "",
+    "page": "events.html",
+    "href": "events.html#photo-DSC_1875"
+  },
   {
-      "file": "DSC_1612.jpg",
-      "pages": [
-        "events.html"
-      ],
-      "tags": "birthday celebration dance dancing events friends music party people",
-      "title": "",
-      "award": "",
-      "page": "events.html",
-      "href": "events.html#photo-DSC_1612"
-    }
+    "file": "DSC_1612.jpg",
+    "pages": [
+      "events.html"
+    ],
+    "tags": "birthday celebration dance dancing events friends music party people",
+    "title": "",
+    "award": "",
+    "page": "events.html",
+    "href": "events.html#photo-DSC_1612"
+  },
+  {
+    "file": "DSC_4119-Edit.jpg",
+    "pages": [
+      "people.html"
+    ],
+    "tags": "face human people portrait studio woman makeup",
+    "title": "",
+    "award": "",
+    "page": "people.html",
+    "href": "people.html#photo-DSC_4119-Edit"
+  },
+  {
+    "file": "portrait-1-52.jpg",
+    "pages": [
+      "people.html"
+    ],
+    "tags": "face human people portrait child girl outdoors sunlight",
+    "title": "",
+    "award": "",
+    "page": "people.html",
+    "href": "people.html#photo-portrait-1-52"
+  },
+  {
+    "file": "DSC_2496-2-Edit.jpg",
+    "pages": [
+      "people.html"
+    ],
+    "tags": "face human people portrait woman cap closeup",
+    "title": "",
+    "award": "",
+    "page": "people.html",
+    "href": "people.html#photo-DSC_2496-2-Edit"
+  },
+  {
+    "file": "DSC_4957-Edit.jpg",
+    "pages": [
+      "people.html"
+    ],
+    "tags": "face human people portrait woman studio portrait",
+    "title": "",
+    "award": "",
+    "page": "people.html",
+    "href": "people.html#photo-DSC_4957-Edit"
+  }
 ];
