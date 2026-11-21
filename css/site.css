@@ -1361,9 +1361,9 @@ html.portfolio-visited .film-card {
   justify-self: center;
 }
 .film-card:not(.film-card-featured) {
-  grid-column: 1 / -1;
-  width: min(100%, 720px);
-  justify-self: center;
+  grid-column: auto;
+  width: 100%;
+  justify-self: stretch;
 }
 .film-card-featured .film-player { box-shadow: 0 20px 54px rgba(27, 25, 22, .14); }
 .film-card-featured .film-number { color: var(--ink); }

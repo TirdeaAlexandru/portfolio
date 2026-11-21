@@ -12,7 +12,7 @@
     "Instagram": "Instagram", "Email": "E-mail", "View my work": "Vezi fotografiile mele",
     "Moving images": "Imagini în mișcare", "A few stories in motion—small worlds, passing moments, and places seen a little differently.": "Câteva povești în mișcare: lumi mici, momente trecătoare și locuri privite altfel.",
     "Watch on YouTube": "Urmărește pe YouTube", "01 / SHORT FILM": "01 / SCURTMETRAJ", "02 / SHORT FILM": "02 / SCURTMETRAJ", "03 / CINEMATIC VIDEO": "03 / VIDEO CINEMATOGRAFIC",
-    "FEATURED VIDEO · SHOWREEL": "VIDEO REPREZENTATIV · SHOWREEL", "Selected moving images": "Selecție de imagini în mișcare", "A Day in Bucharest": "O zi în București",
+    "FEATURED VIDEO · SHOWREEL": "VIDEO REPREZENTATIV · SHOWREEL", "Selected moving images": "Selecție de imagini în mișcare", "A Day in Bucharest": "O zi în București", "SHORT FILM": "SCURTMETRAJ",
     "Awards": "Premii", "Selected prizes and recognitions.": "Premii și distincții selectate.", "International": "Internaționale", "National": "Naționale",
     "View the official result ↗": "Vezi rezultatul oficial ↗", "Directed & edited": "Regie și montaj",
     "Watch on YouTube ↗": "Urmărește pe YouTube ↗",
