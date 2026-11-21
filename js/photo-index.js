@@ -10,7 +10,7 @@ window.portfolioPhotos = [
     "award": "",
     "page": "landscape.html",
     "href": "landscape.html#photo-32-photo-album-1-01-37-70",
-    "location": "Bucharest"
+    "country": "Romania"
   },
   {
     "file": "42-_dsc2607-1-30.jpg",
@@ -46,7 +46,7 @@ window.portfolioPhotos = [
     "award": "",
     "page": "street.html",
     "href": "street.html#photo-72-ppl-38-71",
-    "location": "Bucharest"
+    "country": "Romania"
   },
   {
     "file": "37-_dsc0947.tif-45-25.jpg",
@@ -82,7 +82,7 @@ window.portfolioPhotos = [
     "award": "",
     "page": "landscape.html",
     "href": "landscape.html#photo-61-_dsc3800-hdr-edit-49",
-    "location": "Luxembourg"
+    "country": "Luxembourg"
   },
   {
     "file": "70-_dsc6496v2-22-58.jpg",
@@ -95,7 +95,7 @@ window.portfolioPhotos = [
     "award": "",
     "page": "events.html",
     "href": "events.html#photo-70-_dsc6496v2-22-58",
-    "location": "Galați",
+    "country": "Romania",
     "place": "Danube Rock Revolution, Galați"
   },
   {
@@ -109,7 +109,7 @@ window.portfolioPhotos = [
     "award": "TopPhotoAwards · Top 50",
     "page": "landscape.html",
     "href": "landscape.html#photo-03-alx_0334-5",
-    "location": "Constanța"
+    "country": "Romania"
   },
   {
     "file": "08-dsc_2069-10-10.jpg",
@@ -190,7 +190,7 @@ window.portfolioPhotos = [
     "award": "",
     "page": "street.html",
     "href": "street.html#photo-15-dsc_4799-35-19",
-    "location": "Bucharest"
+    "country": "Romania"
   },
   {
     "file": "19-dsc_5430-edit-19-55.jpg",
@@ -202,7 +202,7 @@ window.portfolioPhotos = [
     "award": "",
     "page": "street.html",
     "href": "street.html#photo-19-dsc_5430-edit-19-55",
-    "location": "Venice"
+    "country": "Italy"
   },
   {
     "file": "47-_dsc3027-56-35.jpg",
@@ -215,7 +215,7 @@ window.portfolioPhotos = [
     "award": "",
     "page": "street.html",
     "href": "street.html#photo-47-_dsc3027-56-35",
-    "location": "Nancy"
+    "country": "France"
   },
   {
     "file": "48-_dsc3087-57-36.jpg",
@@ -228,7 +228,7 @@ window.portfolioPhotos = [
     "award": "",
     "page": "street.html",
     "href": "street.html#photo-48-_dsc3087-57-36",
-    "location": "Nancy"
+    "country": "France"
   },
   {
     "file": "66-_dsc4143-74-53.jpg",
@@ -240,7 +240,7 @@ window.portfolioPhotos = [
     "award": "",
     "page": "street.html",
     "href": "street.html#photo-66-_dsc4143-74-53",
-    "location": "Metz"
+    "country": "France"
   },
   {
     "file": "71-aguadolaura-28-64.jpg",
@@ -252,7 +252,6 @@ window.portfolioPhotos = [
     "award": "",
     "page": "street.html",
     "href": "street.html#photo-71-aguadolaura-28-64",
-    "location": "Constanța"
   },
   {
     "file": "04-dsc-02-36-20.jpg",
@@ -264,7 +263,7 @@ window.portfolioPhotos = [
     "award": "",
     "page": "landscape.html",
     "href": "landscape.html#photo-04-dsc-02-36-20",
-    "location": "Bucharest"
+    "country": "Romania"
   },
   {
     "file": "05-dsc-06-39-21.jpg",
@@ -276,7 +275,7 @@ window.portfolioPhotos = [
     "award": "",
     "page": "landscape.html",
     "href": "landscape.html#photo-05-dsc-06-39-21",
-    "location": "Bucharest"
+    "country": "Romania"
   },
   {
     "file": "22-dsc_6921-7-7.jpg",
@@ -288,7 +287,7 @@ window.portfolioPhotos = [
     "award": "",
     "page": "landscape.html",
     "href": "landscape.html#photo-22-dsc_6921-7-7",
-    "location": "Venice"
+    "country": "Italy"
   },
   {
     "file": "60-_dsc3677-hdr-69-48.jpg",
@@ -311,7 +310,7 @@ window.portfolioPhotos = [
     "award": "",
     "page": "landscape.html",
     "href": "landscape.html#photo-62-_dsc3907-hdr-pano-71-50",
-    "location": "Luxembourg"
+    "country": "Luxembourg"
   },
   {
     "file": "65-_dsc4030-12-12.jpg",
@@ -323,7 +322,7 @@ window.portfolioPhotos = [
     "award": "",
     "page": "landscape.html",
     "href": "landscape.html#photo-65-_dsc4030-12-12",
-    "location": "Galați",
+    "country": "Romania",
     "place": "Dunărea, Galați"
   },
   {
@@ -336,7 +335,7 @@ window.portfolioPhotos = [
     "award": "",
     "page": "events.html",
     "href": "events.html#photo-23-dsc_7053-edit-23-59",
-    "location": "Galați",
+    "country": "Romania",
     "place": "Danube Rock Revolution, Galați"
   },
   {
@@ -349,7 +348,7 @@ window.portfolioPhotos = [
     "award": "",
     "page": "events.html",
     "href": "events.html#photo-26-dsc_8631-1-24-60",
-    "location": "Galați",
+    "country": "Romania",
     "place": "Danube Rock Revolution, Galați"
   },
   {
@@ -362,7 +361,7 @@ window.portfolioPhotos = [
     "award": "",
     "page": "events.html",
     "href": "events.html#photo-27-dsc_8681-1-25-61",
-    "location": "Galați",
+    "country": "Romania",
     "place": "Danube Rock Revolution, Galați"
   },
   {
@@ -375,7 +374,7 @@ window.portfolioPhotos = [
     "award": "",
     "page": "events.html",
     "href": "events.html#photo-28-dsc_8816-1-26-62",
-    "location": "Galați",
+    "country": "Romania",
     "place": "Danube Rock Revolution, Galați"
   },
   {
@@ -388,7 +387,7 @@ window.portfolioPhotos = [
     "award": "",
     "page": "people.html",
     "href": "people.html#photo-16-dsc_4854-edit_1-40-22",
-    "location": "Bucharest"
+    "country": "Romania"
   },
   {
     "file": "18-dsc_4937-edit-29-65.jpg",
@@ -422,7 +421,7 @@ window.portfolioPhotos = [
     "award": "",
     "page": "nature.html",
     "href": "nature.html#photo-02-1-53-1-1",
-    "location": "Galați",
+    "country": "Romania",
     "place": "Târgul Bujor, Galați"
   },
   {
@@ -435,7 +434,7 @@ window.portfolioPhotos = [
     "award": "",
     "page": "nature.html",
     "href": "nature.html#photo-06-dsc_0703-2-2v2-21-57",
-    "location": "Danube Delta",
+    "country": "Romania",
     "place": "Delta Dunării"
   },
   {
@@ -448,7 +447,7 @@ window.portfolioPhotos = [
     "award": "",
     "page": "nature.html",
     "href": "nature.html#photo-14-dsc_4324-33-18",
-    "location": "Bucharest"
+    "country": "Romania"
   },
   {
     "file": "21-dsc_5696-14-14.jpg",
@@ -461,7 +460,7 @@ window.portfolioPhotos = [
     "award": "",
     "page": "street.html",
     "href": "street.html#photo-21-dsc_5696-14-14",
-    "location": "Galați"
+    "country": "Romania"
   },
   {
     "file": "24-dsc_7440-copy-9-9.jpg",
@@ -484,7 +483,7 @@ window.portfolioPhotos = [
     "award": "",
     "page": "nature.html",
     "href": "nature.html#photo-29-dsc_9148-copy-1-6",
-    "location": "Galați"
+    "country": "Romania"
   },
   {
     "file": "34-tirdea_alexandru-pescarusul_ratacit-11-11.jpg",
@@ -496,7 +495,7 @@ window.portfolioPhotos = [
     "award": "",
     "page": "nature.html",
     "href": "nature.html#photo-34-tirdea_alexandru-pescarusul_ratacit-11-11",
-    "location": "Constanța"
+    "country": "Romania"
   },
   {
     "file": "38-_dsc1864-46-26.jpg",
@@ -508,7 +507,7 @@ window.portfolioPhotos = [
     "award": "",
     "page": "street.html",
     "href": "street.html#photo-38-_dsc1864-46-26",
-    "location": "Galați"
+    "country": "Romania"
   },
   {
     "file": "01-1-50-4-4.jpg",
@@ -598,18 +597,7 @@ window.portfolioPhotos = [
     "page": "street.html",
     "href": "street.html#photo-68-_dsc5327-2-27-63"
   },
-  {
-    "file": "73-_dsc3810-hdr.jpg",
-    "pages": [
-      "journal.html"
-    ],
-    "tags": "architecture bridge city landscape river water sky clouds Luxembourg",
-    "title": "Moselle bridge beneath a clouded sky",
-    "award": "",
-    "page": "journal.html",
-    "href": "journal.html#journal-photo-73-_dsc3810-hdr",
-    "location": "Luxembourg"
-  },
+
   {
     "file": "74-_dsc3663-hdr.jpg",
     "pages": [
@@ -632,7 +620,7 @@ window.portfolioPhotos = [
     "award": "",
     "page": "landscape.html",
     "href": "landscape.html#photo-75-_dsc3887-hdr-pano",
-    "location": "Luxembourg",
+    "country": "Luxembourg",
     "place": "Park pond at blue hour, Luxembourg"
   },
   {
@@ -646,7 +634,7 @@ window.portfolioPhotos = [
     "award": "",
     "page": "street.html",
     "href": "street.html#photo-63-_dsc3949-hdr-72-51",
-    "location": "Nancy",
+    "country": "France",
     "place": "Street lamps beneath the moon, Nancy"
   },
   {
@@ -770,6 +758,6 @@ window.portfolioPhotos = [
     "award": "",
     "page": "street.html",
     "href": "street.html#photo-just-do-it-street",
-    "location": "Nancy"
+    "country": "France"
   }
 ];

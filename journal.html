@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
-  <link rel="stylesheet" href="css/site.css?v=mobile-gallery-menu-journal-20261121">
+  <link rel="stylesheet" href="css/site.css?v=country-journal-20261121">
 </head>
 <body>
   <header class="header">
@@ -24,31 +24,27 @@
     <div class="language-switch" role="group" aria-label="Alege limba"><span class="language-label" data-language-label="ro">RO</span><button type="button" class="language-slider" data-language-toggle aria-label="Schimbă în engleză" aria-pressed="false"><span class="sr-only">Schimbă limba</span></button><span class="language-label" data-language-label="en">EN</span></div>
   </header>
   <main class="page journal-page">
-    <header class="journal-heading"><p class="section-kicker">Photography / Places</p><h1>Photo journal</h1><p>Photographs connected to places, with locations added only when confirmed.</p></header>
+    <header class="journal-heading"><p class="section-kicker">Photography / Countries</p><h1>Photo journal</h1><p>Photographs from countries represented in the journal.</p></header>
     <section class="journal-map-section" aria-labelledby="journal-map-title">
-      <div class="journal-map-copy"><p class="section-kicker">EUROPE</p><h2 id="journal-map-title">A map of where the photographs lead</h2><p>Explore the cities, then browse every photograph below.</p></div>
-      <div class="journal-map" id="journal-map" role="application" aria-label="Interactive map of the cities in the photo journal"></div>
-      <p class="journal-attribution">Explore the map or choose a city to browse its photographs.</p>
-      <div class="journal-cities" aria-label="Browse photographs by location">
-        <button type="button" data-city-focus="Galați">Galați</button><button type="button" data-city-focus="Bucharest">Bucharest</button><button type="button" data-city-focus="Venice">Venice</button><button type="button" data-city-focus="Metz">Metz</button><button type="button" data-city-focus="Constanța">Constanța</button><button type="button" data-city-focus="Luxembourg">Luxembourg</button><button type="button" data-city-focus="Nancy">Nancy</button><button type="button" data-city-focus="Danube Delta">Danube Delta</button>
+      <div class="journal-map-copy"><p class="section-kicker">EUROPE</p><h2 id="journal-map-title">Countries in the photo journal</h2><p>Choose a country to browse its photographs.</p></div>
+      <div class="journal-map" id="journal-map" role="application" aria-label="Interactive map of the countries in the photo journal"></div>
+      <p class="journal-attribution">Explore the map or choose a country to browse its photographs.</p>
+      <div class="journal-countries" aria-label="Browse photographs by country">
+        <button type="button" data-country-focus="France">France</button><button type="button" data-country-focus="Italy">Italy</button><button type="button" data-country-focus="Luxembourg">Luxembourg</button><button type="button" data-country-focus="Romania">Romania</button>
       </div>
     </section>
-    <section class="journal-entries" aria-label="Photographs by location">
-      <article class="journal-entry" data-city-entry="Galați"><h2>Galați</h2><div class="journal-photos"></div></article>
-      <article class="journal-entry" data-city-entry="Bucharest"><h2>Bucharest</h2><div class="journal-photos"></div></article>
-      <article class="journal-entry" data-city-entry="Venice"><h2>Venice</h2><div class="journal-photos"></div></article>
-      <article class="journal-entry" data-city-entry="Metz"><h2>Metz</h2><div class="journal-photos"></div></article>
-      <article class="journal-entry" data-city-entry="Constanța"><h2>Constanța</h2><div class="journal-photos"></div></article>
-      <article class="journal-entry" data-city-entry="Luxembourg"><h2>Luxembourg</h2><div class="journal-photos"></div></article>
-      <article class="journal-entry" data-city-entry="Nancy"><h2>Nancy</h2><div class="journal-photos"></div></article>
-      <article class="journal-entry" data-city-entry="Danube Delta"><h2>Danube Delta</h2><div class="journal-photos"></div></article>
+    <section class="journal-entries" aria-label="Photographs by country">
+      <article class="journal-entry" data-country-entry="France"><h2>France</h2><div class="journal-photos"></div></article>
+      <article class="journal-entry" data-country-entry="Italy"><h2>Italy</h2><div class="journal-photos"></div></article>
+      <article class="journal-entry" data-country-entry="Luxembourg"><h2>Luxembourg</h2><div class="journal-photos"></div></article>
+      <article class="journal-entry" data-country-entry="Romania"><h2>Romania</h2><div class="journal-photos"></div></article>
     </section>
   </main>
   <footer class="footer"><img class="footer-signature" src="images/signature.png?v=web-optimized-20261121" alt="Alexandru Țîrdea signature" draggable="false"><span>© Alexandru Țîrdea 2026</span><a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=tirdea.alex2020%40gmail.com">tirdea.alex2020@gmail.com</a></footer>
   <script src="js/site.js?v=journal-mobile-map-20261018"></script><script src="js/language.js?v=street-nature-layout-20261121"></script><script src="js/theme.js?v=theme-transition-20261018"></script><script src="js/chat-config.js?v=portfolio-ai-20261018"></script>
   <script src="js/portfolio-tools.js?v=faq-digital-price-20261121"></script>
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-  <script src="js/photo-index.js?v=nancy-journal-20261121"></script>
-  <script src="js/journal.js?v=city-labels-20261121"></script>
+  <script src="js/photo-index.js?v=country-journal-20261121"></script>
+  <script src="js/journal.js?v=country-journal-20261121"></script>
 </body>
 </html>

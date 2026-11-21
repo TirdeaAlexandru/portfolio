@@ -56,14 +56,14 @@
     "TOPPHOTOAWARDS · JULY 10, 2026": "TOPPHOTOAWARDS · 10 IULIE 2026",
     "FILMMIC 17TH EDITION · PHOTOGRAPHY": "FILMMIC · EDIȚIA A XVII-A · FOTOGRAFIE",
     "“Loneliness” · 1st Prize": "„Singurătate” · Premiul I", "“In Search of Happiness” · 3rd Prize": "„In Search of Happiness” · Premiul III",
-    "Photography / Places": "Fotografie / Locuri", "Photo journal": "Jurnal foto",
-    "Photographs connected to places, with locations added only when confirmed.": "Fotografii legate de locuri, cu locații adăugate doar după confirmare.",
-    "EUROPE": "EUROPA", "A map of where the photographs lead": "O hartă a locurilor surprinse",
-    "Explore the cities, then browse every photograph below.": "Explorează orașele și răsfoiește toate fotografiile de mai jos.",
-    "Explore the map or choose a city to browse its photographs.": "Explorează harta sau alege un oraș pentru a-i vedea fotografiile.",
-    "Jump to a city on the map": "Mergi la un oraș de pe hartă", "Bucharest": "București",
-    "Venice": "Veneția", "Luxembourg": "Luxemburg", "Danube Delta": "Delta Dunării",
-    "Photographs by location": "Fotografii după locație", "Browse photographs by location": "Răsfoiește fotografiile după locație",
+    "Photography / Countries": "Fotografie / Țări", "Photo journal": "Jurnal foto",
+    "Photographs from countries represented in the journal.": "Fotografii din țările reprezentate în jurnal.",
+    "Countries in the photo journal": "Țările din jurnalul foto",
+    "Choose a country to browse its photographs.": "Alege o țară pentru a-i răsfoi fotografiile.",
+    "Explore the map or choose a country to browse its photographs.": "Explorează harta sau alege o țară pentru a-i răsfoi fotografiile.",
+    "Browse photographs by country": "Răsfoiește fotografiile după țară",
+    "Photographs by country": "Fotografii după țară",
+    "France": "Franța", "Italy": "Italia", "Luxembourg": "Luxemburg", "Romania": "România",
     "More photographs from home will be added here.": "Voi adăuga aici mai multe fotografii de acasă.",
     "Photographs from Bucharest will be added here.": "Voi adăuga aici fotografii din București.",
     "More photographs will be added here.": "Voi adăuga aici mai multe fotografii.",
@@ -128,7 +128,7 @@
   };
 
   const attributes = {
-    "Interactive map of the cities in the photo journal": "Hartă interactivă a orașelor din jurnalul foto",
+    "Interactive map of the countries in the photo journal": "Hartă interactivă a țărilor din jurnalul foto",
     "Watch Lady Tan’s Circle of Women on YouTube — Boovie 2026 first prize": "Urmărește Doamna Tan și cercul binelui pe YouTube — Premiul I Boovie 2026",
     "Watch A Good Life on YouTube — Boovie 2025 special prize": "Urmărește A Good Life pe YouTube — Premiul special Boovie 2025",
     "Selected Work — Alexandru Țîrdea": "Lucrări selectate — Alexandru Țîrdea",
@@ -177,24 +177,24 @@
     const journalMapCopy = document.querySelector(".journal-map-copy");
     if (journalMapCopy) {
       const mapCopy = current === "ro"
-        ? { kicker: "EUROPA", title: "O hartă a locurilor surprinse", intro: "Explorează orașele și răsfoiește toate fotografiile de mai jos.", note: "Explorează harta sau alege un oraș pentru a-i vedea fotografiile." }
-        : { kicker: "EUROPE", title: "A map of where the photographs lead", intro: "Explore the cities, then browse every photograph below.", note: "Explore the map or choose a city to browse its photographs." };
+        ? { kicker: "EUROPA", title: "Țările din jurnalul foto", intro: "Alege o țară pentru a-i răsfoi fotografiile.", note: "Explorează harta sau alege o țară pentru a-i răsfoi fotografiile." }
+        : { kicker: "EUROPE", title: "Countries in the photo journal", intro: "Choose a country to browse its photographs.", note: "Explore the map or choose a country to browse its photographs." };
       journalMapCopy.querySelector(".section-kicker").textContent = mapCopy.kicker;
       journalMapCopy.querySelector("h2").textContent = mapCopy.title;
       journalMapCopy.querySelector("p:last-child").textContent = mapCopy.intro;
       const mapNote = document.querySelector(".journal-attribution");
       if (mapNote) mapNote.textContent = mapCopy.note;
       const mapElement = document.getElementById("journal-map");
-      if (mapElement) mapElement.setAttribute("aria-label", current === "ro" ? "Hartă interactivă a orașelor din jurnalul foto" : "Interactive map of the cities in the photo journal");
-      const cityNames = current === "ro"
-        ? { Bucharest: "București", Venice: "Veneția", Luxembourg: "Luxemburg", "Danube Delta": "Delta Dunării" }
-        : { Bucharest: "Bucharest", Venice: "Venice", Luxembourg: "Luxembourg", "Danube Delta": "Danube Delta" };
-      document.querySelectorAll(".journal-cities [data-city-focus]").forEach(function (button) {
-        const city = button.dataset.cityFocus;
-        button.textContent = cityNames[city] || city;
+      if (mapElement) mapElement.setAttribute("aria-label", current === "ro" ? "Hartă interactivă a țărilor din jurnalul foto" : "Interactive map of the countries in the photo journal");
+      const countryNames = current === "ro"
+        ? { France: "Franța", Italy: "Italia", Luxembourg: "Luxemburg", Romania: "România" }
+        : { France: "France", Italy: "Italy", Luxembourg: "Luxembourg", Romania: "Romania" };
+      document.querySelectorAll(".journal-countries [data-country-focus]").forEach(function (button) {
+        const country = button.dataset.countryFocus;
+        button.textContent = countryNames[country] || country;
       });
-      const cityList = document.querySelector(".journal-cities");
-      if (cityList) cityList.setAttribute("aria-label", current === "ro" ? "Răsfoiește fotografiile după locație" : "Browse photographs by location");
+      const countryList = document.querySelector(".journal-countries");
+      if (countryList) countryList.setAttribute("aria-label", current === "ro" ? "Răsfoiește fotografiile după țară" : "Browse photographs by country");
     }
     document.querySelectorAll("[alt], [aria-label], [title], meta[name='description']").forEach(function (el) {
       if (el.closest && el.closest("[data-language-fixed='en']")) return;

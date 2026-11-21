@@ -2311,9 +2311,9 @@ html[data-theme="dark"] .intro-signature { filter: invert(1); }
 .journal-map .leaflet-interactive { cursor: pointer; }
 .journal-attribution { margin: 7px 1px 18px; text-align: right; }
 .journal-attribution a { color: inherit; }
-.journal-cities { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
-.journal-cities button { border: 1px solid var(--line); border-radius: 999px; padding: 9px 14px; background: transparent; color: var(--ink); cursor: pointer; font: 500 12px/1 var(--font-sans); }
-.journal-cities button:focus-visible { outline: 2px solid #a58050; outline-offset: 2px; }
+.journal-countries { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
+.journal-countries button { border: 1px solid var(--line); border-radius: 999px; padding: 9px 14px; background: transparent; color: var(--ink); cursor: pointer; font: 500 12px/1 var(--font-sans); }
+.journal-countries button:focus-visible { outline: 2px solid #a58050; outline-offset: 2px; }
 .journal-entries { max-width: 1000px; margin: 0 auto 72px; scroll-margin-top: 90px; }
 .journal-entry { scroll-margin-top: calc(var(--header) + 16px); padding: 20px 0 34px; border-top: 1px solid var(--line); }
 .journal-entry h2 { margin: 0; font: 500 34px/1 var(--font-display); transition: color .35s ease, text-decoration-color .35s ease; }
@@ -2333,7 +2333,7 @@ main.journal-focus-active .journal-entry--focused { position: relative; z-index:
 .journal-entry--pending { opacity: .8; }
 .journal-entry--empty { padding-bottom: 22px; }
 @media(max-width:900px) { .journal-photos { grid-template-columns: repeat(2,minmax(0,1fr)); } }
-@media(max-width:600px) { .journal-map { height: min(82vw, 360px); min-height: 290px; } .journal-photos { grid-template-columns: 1fr; gap: 10px; } .journal-cities { gap: 7px; } .journal-cities button { min-height: 40px; padding: 9px 12px; } }
+@media(max-width:600px) { .journal-map { height: min(82vw, 360px); min-height: 290px; } .journal-photos { grid-template-columns: 1fr; gap: 10px; } .journal-countries { gap: 7px; } .journal-countries button { min-height: 40px; padding: 9px 12px; } }
 @media(hover:none) { .journal-photo-caption { opacity: 1; transform: none; } }
 @media(prefers-reduced-motion:reduce) { .journal-map-section, .journal-entry { transition: none; } }
 .portfolio-guide-launcher { position: fixed; z-index: 90; right: 22px; bottom: 22px; display: inline-flex; align-items: center; gap: 9px; min-height: 48px; padding: 0 18px; border: 1px solid var(--line); border-radius: 999px; background: var(--ink); color: var(--bg); box-shadow: 0 12px 34px rgba(0,0,0,.2); cursor: pointer; font: 500 12px/1 var(--font-body); letter-spacing: .04em; }

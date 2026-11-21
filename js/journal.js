@@ -1,34 +1,28 @@
 (function () {
-  // Render the galleries independently of the optional map library. If Leaflet
-  // or its CDN is unavailable, location photos must still appear normally.
+  // Render country galleries independently of the optional map library. If Leaflet
+  // or its CDN is unavailable, journal photos must still appear normally.
   const photos = window.portfolioPhotos || [];
-  document.querySelectorAll("[data-city-entry]").forEach(function (section) {
-    const city = section.dataset.cityEntry;
+  document.querySelectorAll("[data-country-entry]").forEach(function (section) {
+    const country = section.dataset.countryEntry;
     const gallery = section.querySelector(".journal-photos");
     if (!gallery) return;
-    const cityPhotos = photos.filter(function (photo) { return photo.location === city; });
+    const countryPhotos = photos.filter(function (photo) { return photo.country === country; });
     const heading = section.querySelector("h2");
     if (heading) heading.tabIndex = -1;
-    cityPhotos.forEach(function (photo) {
+    countryPhotos.forEach(function (photo) {
       const link = document.createElement("a");
       const filename = photo.file.replace(/\.jpg$/i, "");
       link.id = "journal-photo-" + filename.replace(/[^a-z0-9_-]/gi, "-");
       link.href = photo.href || (photo.page + "#photo-" + filename);
-      link.setAttribute("aria-label", photo.place || ("Photograph from " + city));
+      link.setAttribute("aria-label", photo.place || ("Photograph from " + country));
       const image = document.createElement("img");
       image.src = "images/" + photo.file + "?v=web-optimized-20261121";
-      image.alt = photo.place ? ("" + photo.place) : ("Photograph from " + city);
+      image.alt = photo.place ? ("" + photo.place) : ("Photograph from " + country);
       image.loading = "lazy";
       link.appendChild(image);
-      if (photo.place) {
-        const caption = document.createElement("span");
-        caption.className = "journal-photo-caption";
-        caption.textContent = photo.place;
-        link.appendChild(caption);
-      }
       gallery.appendChild(link);
     });
-    if (cityPhotos.length === 0) {
+    if (countryPhotos.length === 0) {
       section.classList.add("journal-entry--empty");
     }
   });
@@ -36,15 +30,11 @@
   const mapElement = document.getElementById("journal-map");
   if (!mapElement || !window.L) return;
 
-  const cities = {
-    "Galați": [45.4353, 28.0080],
-    "Bucharest": [44.4268, 26.1025],
-    "Venice": [45.4408, 12.3155],
-    "Metz": [49.1193, 6.1757],
-    "Luxembourg": [49.6116, 6.1319],
-    "Nancy": [48.6921, 6.1844],
-    "Constanța": [44.1792, 28.6506],
-    "Danube Delta": [45.1000, 29.3000]
+  const countries = {
+    France: [46.6, 2.2],
+    Italy: [42.8, 12.6],
+    Luxembourg: [49.8153, 6.1296],
+    Romania: [45.9, 24.9]
   };
   const map = L.map(mapElement, {
     scrollWheelZoom: false,
@@ -60,9 +50,9 @@
   }).addTo(map);
   let selectionSequence = 0;
   let focusEffectTimer;
-  function showCityPhotos(city) {
-    const entry = Array.from(document.querySelectorAll("[data-city-entry]")).find(function (section) {
-      return section.dataset.cityEntry === city;
+  function showCountryPhotos(country) {
+    const entry = Array.from(document.querySelectorAll("[data-country-entry]")).find(function (section) {
+      return section.dataset.countryEntry === country;
     });
     if (!entry) return;
     const heading = entry.querySelector("h2");
@@ -128,15 +118,10 @@
     requestAnimationFrame(waitForScrollEnd);
   }
   const mapPlaces = [
-    { label: "Galați", labelRo: "Galați", city: "Galați", coords: cities["Galați"] },
-    { label: "Târgul Bujor, Galați", labelRo: "Târgul Bujor, Galați", city: "Galați", coords: [45.8667, 27.9167] },
-    { label: "Bucharest", labelRo: "București", city: "Bucharest", coords: cities["Bucharest"] },
-    { label: "Venice", labelRo: "Veneția", city: "Venice", coords: cities.Venice },
-    { label: "Metz", labelRo: "Metz", city: "Metz", coords: cities.Metz },
-    { label: "Luxembourg", labelRo: "Luxemburg", city: "Luxembourg", coords: cities.Luxembourg },
-    { label: "Nancy", labelRo: "Nancy", city: "Nancy", coords: cities.Nancy },
-    { label: "Constanța", labelRo: "Constanța", city: "Constanța", coords: cities["Constanța"] },
-    { label: "Danube Delta · Delta Dunării", labelRo: "Delta Dunării", city: "Danube Delta", coords: cities["Danube Delta"] }
+    { label: "France", labelRo: "Franța", country: "France", coords: countries.France },
+    { label: "Italy", labelRo: "Italia", country: "Italy", coords: countries.Italy },
+    { label: "Luxembourg", labelRo: "Luxemburg", country: "Luxembourg", coords: countries.Luxembourg },
+    { label: "Romania", labelRo: "România", country: "Romania", coords: countries.Romania }
   ];
   const placeMarkers = [];
   function placeLabel(place) {
@@ -150,10 +135,10 @@
       fillColor: "#30353a",
       fillOpacity: 1
     }).addTo(map);
-    marker.bindTooltip(placeLabel(place), { direction: "top", offset: [0, -7] });
+    marker.bindTooltip(placeLabel(place), { direction: "top", offset: [0, -7], permanent: true });
     placeMarkers.push({ marker: marker, place: place });
-    if (place.city) {
-      marker.on("click", function () { showCityPhotos(place.city); });
+    if (place.country) {
+      marker.on("click", function () { showCountryPhotos(place.country); });
     }
   });
   window.addEventListener("portfolio-language-change", function () {
@@ -168,9 +153,9 @@
   requestAnimationFrame(fitMap);
   window.addEventListener("resize", fitMap);
 
-  document.querySelectorAll("[data-city-focus]").forEach(function (button) {
+  document.querySelectorAll("[data-country-focus]").forEach(function (button) {
     button.addEventListener("click", function () {
-      showCityPhotos(button.dataset.cityFocus);
+      showCountryPhotos(button.dataset.countryFocus);
     });
   });
 })();
