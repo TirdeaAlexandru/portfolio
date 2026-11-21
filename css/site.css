@@ -1291,7 +1291,7 @@ html:not(.language-ready) .language-slider::after { transition: none; }
   width: min(100%, 1480px);
   min-height: calc(100svh - var(--header));
   margin: 0 auto;
-  padding: clamp(40px, 6vw, 88px) clamp(18px, 4vw, 64px) 88px;
+  padding: clamp(22px, 3vw, 42px) clamp(18px, 4vw, 64px) 88px;
 }
 
 .films-heading {
@@ -2457,31 +2457,23 @@ html[data-theme="light"] .contact-panel {
   .language-switch[data-current="en"] .language-slider::after { transform: translateX(7px); }
 }
 
-/* Keep monochrome and color photographs in distinct, unlabeled columns. */
+/* Keep Street photographs uncropped in one quiet masonry flow. */
 .collection-page--street > .street-gallery {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  align-items: start;
-  column-count: initial;
-  column-gap: clamp(20px, 4vw, 56px);
-  gap: clamp(20px, 4vw, 56px);
+  display: block;
+  column-count: 3;
+  column-gap: var(--gap);
 }
-.street-photo-family { display: grid; align-content: start; gap: var(--gap); min-width: 0; }
-.street-mono-feature {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  grid-template-rows: auto;
-  gap: var(--gap);
+.collection-page--street .street-gallery img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  max-height: none;
+  object-fit: contain;
+  transform: none;
 }
-.street-mono-feature a,
-.street-mono-grid a,
-.street-color-grid a { min-width: 0; margin: 0; overflow: hidden; }
-.collection-page--street .street-gallery a { overflow: visible; }
-.collection-page--street .street-gallery img { display: block; width: 100%; height: auto; object-fit: contain; transform: none; }
 .collection-page--street .street-gallery a:hover img,
 .collection-page--street .street-gallery a:focus-visible img { opacity: 1; transform: none; }
-.street-mono-grid,
-.street-color-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; gap: var(--gap); }
 
 /* Pair selected landscape photographs in a lightly guttered, uncropped grid. */
 .collection-page--landscape > .landscape-gallery {
@@ -2521,16 +2513,17 @@ html[data-theme="light"] .contact-panel {
 .collection-page--nature > .nature-gallery .nature-color-group:last-child a:last-child { grid-column: 4 / span 2; }
 .nature-color-group a { min-width: 0; margin: 0; }
 
-/* Keep the Top 20 photograph landscape and uncropped, at the same feature width. */
-.award-highlights--top20 { display: block; max-width: 680px; margin-left: 0; }
+/* Align the Top 20 and Anatole Magrin award cards with the feature entries. */
+.award-highlights--top20 { display: block; width: min(100%, 680px); max-width: 680px; margin: 16px 0 30px; }
 .award-certificate--top20 { max-width: 680px; }
 .top20-photo-preview { height: clamp(220px, 34vw, 360px); aspect-ratio: 3 / 2; background: #292827; }
-.top20-photo-preview img { object-fit: contain; }
-.anatole-award-feature img { aspect-ratio: 3 / 2; object-fit: contain !important; background: #ddd9d1; }
+.top20-photo-preview img { object-fit: cover; }
+.anatole-award-feature img { object-fit: cover !important; background: #292827; }
 .award-film-grid--2026 { margin-top: 18px; }
 .anatole-award-feature { margin-top: 22px; }
 
 @media (max-width: 980px) {
+  .collection-page--street > .street-gallery { column-count: 2; }
   .collection-page--landscape > .landscape-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .collection-page--nature > .nature-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .collection-page--nature > .nature-gallery .nature-color-group { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -2539,10 +2532,8 @@ html[data-theme="light"] .contact-panel {
   .collection-page--nature > .nature-gallery .nature-color-group:last-child a:last-child { grid-column: auto; }
 }
 @media (max-width: 720px) {
+  .collection-page--street > .street-gallery { column-count: 1; }
   .collection-page--landscape > .landscape-gallery { grid-template-columns: 1fr; }
-  .collection-page--street > .street-gallery { grid-template-columns: 1fr; }
-  .street-mono-feature { grid-template-columns: 1fr; grid-template-rows: auto; }
-  .street-mono-grid, .street-color-grid { grid-template-columns: 1fr; }
   .collection-page--nature > .nature-gallery { grid-template-columns: 1fr; gap: 32px; }
   .collection-page--nature > .nature-gallery .nature-color-group,
   .collection-page--nature > .nature-gallery .nature-color-group:last-child { grid-template-columns: 1fr; }
