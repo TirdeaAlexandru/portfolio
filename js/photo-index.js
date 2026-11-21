@@ -692,5 +692,71 @@ window.portfolioPhotos = [
     "href": "landscape.html#photo-63-_dsc3949-hdr-72-51",
     "location": "Luxembourg",
     "place": "Street lamps beneath the moon, Luxembourg"
-  }
+  },
+  {
+      "file": "DSC_9410.jpg",
+      "pages": [
+        "events.html"
+      ],
+      "tags": "birthday celebration dance dancing events friends party people",
+      "title": "",
+      "award": "",
+      "page": "events.html",
+      "href": "events.html#photo-DSC_9410"
+    },
+  {
+      "file": "DSC_9443.jpg",
+      "pages": [
+        "events.html"
+      ],
+      "tags": "birthday cake celebration events friends group party people",
+      "title": "",
+      "award": "",
+      "page": "events.html",
+      "href": "events.html#photo-DSC_9443"
+    },
+  {
+      "file": "DSC_1772.jpg",
+      "pages": [
+        "events.html"
+      ],
+      "tags": "18 birthday cake celebration events party",
+      "title": "",
+      "award": "",
+      "page": "events.html",
+      "href": "events.html#photo-DSC_1772"
+    },
+  {
+      "file": "DSC_1941.jpg",
+      "pages": [
+        "events.html"
+      ],
+      "tags": "birthday celebration friends events party people portrait",
+      "title": "",
+      "award": "",
+      "page": "events.html",
+      "href": "events.html#photo-DSC_1941"
+    },
+  {
+      "file": "DSC_1875.jpg",
+      "pages": [
+        "events.html"
+      ],
+      "tags": "birthday celebration dance dancing events friends music party people",
+      "title": "",
+      "award": "",
+      "page": "events.html",
+      "href": "events.html#photo-DSC_1875"
+    },
+  {
+      "file": "DSC_1612.jpg",
+      "pages": [
+        "events.html"
+      ],
+      "tags": "birthday celebration dance dancing events friends music party people",
+      "title": "",
+      "award": "",
+      "page": "events.html",
+      "href": "events.html#photo-DSC_1612"
+    }
 ];
