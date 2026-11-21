@@ -2436,7 +2436,7 @@ html[data-theme="light"] .contact-panel {
 
 /* Keep the awards page focused on the two selected photography distinctions. */
 .awards-page { max-width: 980px; }
-.awards-page > p { margin-bottom: 26px; }
+.awards-page > p { margin-bottom: 26px; color: var(--muted); }
 .awards-list {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
