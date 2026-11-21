@@ -207,26 +207,28 @@ window.portfolioPhotos = [
   {
     "file": "47-_dsc3027-56-35.jpg",
     "pages": [
-      "street.html"
+      "street.html",
+      "journal.html"
     ],
-    "tags": "cafe candid city interior lifestyle people red street table urban woman working metz",
+    "tags": "cafe candid city interior lifestyle people red street table urban woman working nancy",
     "title": "",
     "award": "",
     "page": "street.html",
     "href": "street.html#photo-47-_dsc3027-56-35",
-    "location": "Metz"
+    "location": "Nancy"
   },
   {
     "file": "48-_dsc3087-57-36.jpg",
     "pages": [
-      "street.html"
+      "street.html",
+      "journal.html"
     ],
-    "tags": "cafe candid city couple elderly lifestyle people street table urban metz",
+    "tags": "cafe candid city couple elderly lifestyle people street table urban nancy",
     "title": "",
     "award": "",
     "page": "street.html",
     "href": "street.html#photo-48-_dsc3087-57-36",
-    "location": "Metz"
+    "location": "Nancy"
   },
   {
     "file": "66-_dsc4143-74-53.jpg",
@@ -297,8 +299,7 @@ window.portfolioPhotos = [
     "title": "",
     "award": "",
     "page": "landscape.html",
-    "href": "landscape.html#photo-60-_dsc3677-hdr-69-48",
-    "location": "Luxembourg"
+    "href": "landscape.html#photo-60-_dsc3677-hdr-69-48"
   },
   {
     "file": "62-_dsc3907-hdr-pano-71-50.jpg",
@@ -607,22 +608,18 @@ window.portfolioPhotos = [
     "award": "",
     "page": "journal.html",
     "href": "journal.html#journal-photo-73-_dsc3810-hdr",
-    "location": "Luxembourg",
-    "place": "Moselle bridge beneath a clouded sky, Luxembourg"
+    "location": "Luxembourg"
   },
   {
     "file": "74-_dsc3663-hdr.jpg",
     "pages": [
-      "landscape.html",
-      "journal.html"
+      "landscape.html"
     ],
     "tags": "architecture bridge city landscape river reflection trees Luxembourg",
     "title": "Riverside at dusk",
     "award": "",
     "page": "landscape.html",
-    "href": "landscape.html#photo-74-_dsc3663-hdr",
-    "location": "Luxembourg",
-    "place": "Riverside at dusk, Luxembourg"
+    "href": "landscape.html#photo-74-_dsc3663-hdr"
   },
   {
     "file": "75-_dsc3887-hdr-pano.jpg",
@@ -644,13 +641,13 @@ window.portfolioPhotos = [
       "street.html",
       "journal.html"
     ],
-    "tags": "Luxembourg streetlight lamp moon blue hour dusk city architecture night landscape trees urban",
+    "tags": "Nancy streetlight lamp moon blue hour dusk city architecture night landscape trees urban",
     "title": "Street lamps beneath the moon",
     "award": "",
     "page": "street.html",
     "href": "street.html#photo-63-_dsc3949-hdr-72-51",
-    "location": "Luxembourg",
-    "place": "Street lamps beneath the moon, Luxembourg"
+    "location": "Nancy",
+    "place": "Street lamps beneath the moon, Nancy"
   },
   {
     "file": "DSC_9410.jpg",
@@ -761,5 +758,18 @@ window.portfolioPhotos = [
     "award": "",
     "page": "people.html",
     "href": "people.html#photo-DSC_4957-Edit"
+  },
+  {
+    "file": "just-do-it-street.jpg",
+    "pages": [
+      "street.html",
+      "journal.html"
+    ],
+    "tags": "candid children city girl mother people street urban crowd nancy france",
+    "title": "",
+    "award": "",
+    "page": "street.html",
+    "href": "street.html#photo-just-do-it-street",
+    "location": "Nancy"
   }
 ];

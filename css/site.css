@@ -2623,3 +2623,46 @@ html[data-theme="light"] .contact-panel {
   .collection-page--nature > .nature-gallery .nature-color-group,
   .collection-page--nature > .nature-gallery .nature-color-group:last-child { grid-template-columns: 1fr; }
 }
+
+/* Set the mobile theme glyph in its own centered box and separate the
+   Photography submenu from the page behind the expanded navigation. */
+@media (max-width: 720px) {
+  .theme-toggle-icon {
+    display: grid;
+    width: 22px;
+    height: 22px;
+    place-items: center;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1;
+    transform-origin: center;
+  }
+
+  .nav .drop.is-open .drop-menu {
+    display: block;
+    width: calc(100% - 28px);
+    margin: 4px 14px 12px;
+    padding: 8px;
+    border: 1px solid rgba(20, 20, 20, .14);
+    border-left: 3px solid var(--collection-accent, #a57d5e);
+    border-radius: 12px;
+    background: rgba(225, 222, 217, .72);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, .16);
+  }
+
+  .nav .drop-menu a {
+    padding: 10px 14px;
+    border-radius: 7px;
+  }
+
+  .nav .drop-menu a + a { border-top: 1px solid rgba(20, 20, 20, .08); }
+
+  html[data-theme="dark"] .nav .drop.is-open .drop-menu {
+    border-color: rgba(255, 255, 255, .14);
+    border-left-color: #c49a78;
+    background: #292a2d;
+    box-shadow: 0 14px 32px rgba(0, 0, 0, .34);
+  }
+
+  html[data-theme="dark"] .nav .drop-menu a + a { border-top-color: rgba(255, 255, 255, .08); }
+}
