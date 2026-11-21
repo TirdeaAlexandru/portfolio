@@ -2457,11 +2457,17 @@ html[data-theme="light"] .contact-panel {
   .language-switch[data-current="en"] .language-slider::after { transform: translateX(7px); }
 }
 
-/* Keep Street photographs uncropped in one quiet masonry flow. */
+/* Keep Street photographs uncropped in horizontal, row-by-row order. */
 .collection-page--street > .street-gallery {
-  display: block;
-  column-count: 3;
-  column-gap: var(--gap);
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: start;
+  column-count: initial;
+  gap: var(--gap);
+}
+.collection-page--street > .street-gallery a {
+  min-width: 0;
+  margin: 0;
 }
 .collection-page--street .street-gallery img {
   display: block;
@@ -2523,7 +2529,7 @@ html[data-theme="light"] .contact-panel {
 .anatole-award-feature { margin-top: 22px; }
 
 @media (max-width: 980px) {
-  .collection-page--street > .street-gallery { column-count: 2; }
+  .collection-page--street > .street-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .collection-page--landscape > .landscape-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .collection-page--nature > .nature-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .collection-page--nature > .nature-gallery .nature-color-group { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -2532,7 +2538,7 @@ html[data-theme="light"] .contact-panel {
   .collection-page--nature > .nature-gallery .nature-color-group:last-child a:last-child { grid-column: auto; }
 }
 @media (max-width: 720px) {
-  .collection-page--street > .street-gallery { column-count: 1; }
+  .collection-page--street > .street-gallery { grid-template-columns: 1fr; }
   .collection-page--landscape > .landscape-gallery { grid-template-columns: 1fr; }
   .collection-page--nature > .nature-gallery { grid-template-columns: 1fr; gap: 32px; }
   .collection-page--nature > .nature-gallery .nature-color-group,
