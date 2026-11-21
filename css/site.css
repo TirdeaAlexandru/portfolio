@@ -2387,13 +2387,13 @@ html[data-theme="light"] .contact-panel {
 }
 
 /* Keep the four controlled studio portraits in a balanced 2×2 grid. */
-.collection-page--people .portrait-group:first-child .gallery {
+.collection-page--people .portrait-group:first-of-type .gallery {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   column-count: initial;
   gap: var(--gap);
 }
-.collection-page--people .portrait-group:first-child .gallery a {
+.collection-page--people .portrait-group:first-of-type .gallery a {
   margin: 0;
 }
 
