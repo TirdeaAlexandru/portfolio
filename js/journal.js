@@ -16,7 +16,7 @@
       link.href = photo.href || (photo.page + "#photo-" + filename);
       link.setAttribute("aria-label", photo.place || ("Photograph from " + city));
       const image = document.createElement("img");
-      image.src = "images/" + photo.file;
+      image.src = "images/" + photo.file + "?v=web-optimized-20261121";
       image.alt = photo.place ? ("" + photo.place) : ("Photograph from " + city);
       image.loading = "lazy";
       link.appendChild(image);

@@ -154,7 +154,7 @@
         link.className = "portfolio-search-result";
         link.href = photo.href;
         const image = document.createElement("img");
-        image.src = "images/" + photo.file;
+        image.src = "images/" + photo.file + "?v=web-optimized-20261121";
         image.alt = photo.title || photo.tags.split(" ").slice(0, 4).join(", ");
         image.loading = "lazy";
         const caption = document.createElement("span");

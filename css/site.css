@@ -1583,16 +1583,21 @@ html.portfolio-visited .film-card {
 
 @media (max-width: 720px) {
   .header {
+    gap: 8px;
     padding: 0 16px;
     height: 60px;
   }
 
-  .header > .theme-toggle { order: 3; margin: 0 0 0 8px; }
-  .header > .language-switch { order: 2; margin: 0; }
-  .header > .menu-toggle { order: 4; margin-left: 8px; }
+  .header > .theme-toggle { order: 3; flex: 0 0 32px; width: 32px; height: 32px; margin: 0; }
+  .header > .language-switch { order: 2; flex: 0 0 auto; gap: 4px; margin: 0; padding: 3px 5px; }
+  .header > .menu-toggle { order: 4; flex: 0 0 30px; width: 30px; margin: 0; }
+  .language-label { font-size: 8px; }
+  .language-slider { width: 30px; }
+  .language-switch[data-current="en"] .language-slider::after { transform: translateX(11px); }
 
   .logo {
-    font-size: 22px;
+    min-width: 0;
+    font-size: clamp(18px, 5.6vw, 22px);
   }
 
   .menu-toggle {
@@ -2441,3 +2446,41 @@ html[data-theme="light"] .contact-panel {
 .anatole-award-thumb { display: block; flex: 0 0 112px; width: 112px; height: 63px; object-fit: cover; border-radius: 4px; }
 @media (max-width: 720px) { .anatole-award-thumb { flex-basis: 92px; width: 92px; height: 56px; } }
 
+
+@media (max-width: 380px) {
+  .header { gap: 4px; padding-inline: 12px; }
+  .logo { font-size: 18px; }
+  .header > .theme-toggle { flex-basis: 30px; width: 30px; height: 30px; }
+  .header > .menu-toggle { flex-basis: 28px; width: 28px; }
+  .header > .language-switch { gap: 3px; padding: 2px 4px; }
+  .language-slider { width: 26px; }
+  .language-switch[data-current="en"] .language-slider::after { transform: translateX(7px); }
+}
+
+/* Street images are arranged in color families, with no visible group labels. */
+.collection-page--street .street-color-group {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: start;
+  gap: var(--gap);
+}
+.collection-page--street > .street-gallery {
+  display: flex;
+  flex-direction: column;
+  column-count: initial;
+}
+.collection-page--street .street-color-group + .street-color-group {
+  margin-top: clamp(36px, 5vw, 58px);
+}
+.collection-page--street .street-color-group a {
+  min-width: 0;
+  margin: 0;
+  break-inside: initial;
+}
+@media (max-width: 980px) {
+  .collection-page--street .street-color-group { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 720px) {
+  .collection-page--street .street-color-group { grid-template-columns: 1fr; }
+  .collection-page--street .street-color-group + .street-color-group { margin-top: 32px; }
+}
