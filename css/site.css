@@ -2095,9 +2095,10 @@ html.portfolio-visited .film-card {
     width: calc(100% + 40px);
     max-width: none;
     margin: 0 -20px;
+    padding: 0 10px;
     column-count: 1;
   }
-  .collection-page--selected .gallery a { margin: 0; border-radius: 0; }
+  .collection-page--selected .gallery a { margin: 0 0 10px; border-radius: 5px; }
 }
 
 /* Persistent site-wide dark theme. */
